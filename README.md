@@ -9,9 +9,11 @@ Selfie Spots is an app that connect users to the most popular areas around their
 # MVP Technical Requirements:
 * Be able to pull and aggregate popular spots by hashtag and location from IG API
 * Display pulled data on maps using gMaps API
-* Be able to save user favorites
-* Stretch: History - User is able to check where they've already taken selfies
-* Stretch: View public selfies at selfie-spots
+
+# Stretch Goals
+* Saving favorite spots.
+* History - User is able to check where they've already taken selfies
+* View public selfies at selfie-spots
 
 # User Stories:
 * As a **user**,
