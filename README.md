@@ -14,14 +14,14 @@ Selfie Spots is an app that connect users to the most popular areas around their
 * Stretch: View public selfies at selfie-spots
 
 # User Stories:
-* As a user, I want
-  * to see popular selfie spots in the area I am in, so that I can do fun things locals are doing in their area.
-  * to be able to save selfie spots to my favorites list, so that I can pull them up for future viewing.
-  * to interact with a fluid interface so that I can have an enjoyable experience.
+* As a user,
+  * I want to see popular selfie spots in the area I am in, so that I can do fun things locals are doing in their area.
+  * I want to be able to save selfie spots to my favorites list, so that I can pull them up for future viewing.
+  * I want to interact with a fluid interface so that I can have an enjoyable experience.
 
-* As a developer, I want
-  * to make the interaction fluid, so that a user can experience fun attractions near them
-  * to promote modularity in my design, so that I can reuse parts of my program.
+* As a developer,
+  * I want to make the interaction fluid, so that a user can experience fun attractions near them
+  * I want to promote modularity in my design, so that I can reuse parts of my program.
 
 # Team Resources:
 ### Tools:
