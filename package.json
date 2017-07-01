@@ -1,0 +1,21 @@
+{
+  "name": "selfie-spots",
+  "version": "1.0.0",
+  "description": "Selfie Spots is an app that connect users to the most popular areas around their current location using aggregate data called from Instagram's API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohjonah/selfie-spots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohjonah/selfie-spots/issues"
+  },
+  "homepage": "https://github.com/ohjonah/selfie-spots#readme"
+}
