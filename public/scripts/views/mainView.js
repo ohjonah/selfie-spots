@@ -34,12 +34,31 @@ var app = app || {};
   function showPosition() {
     map.setCenter(coordinates);
     setMarker(coordinates);
+    showNearbySpots();
   }
 
-  function setMarker(coordinates) {
+  function setMarker(coordinates, icon) {
     var marker = new google.maps.Marker({
       position: coordinates,
-      map: map
+      map: map,
+      icon: icon
+    });
+  }
+
+  function setSpotMarker(coordinates, selfieCount) {
+    var icon = {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 5 + selfieCount
+    }
+
+    setMarker(coordinates, icon);
+  }
+
+  function showNearbySpots() {
+    app.Spot.fetchNearby(coordinates, function(spots) {
+      spots.forEach(function(spot) {
+        setSpotMarker({ lat: spot.latitude, lng: spot.longitude}, spot.count);
+      });
     });
   }
 
