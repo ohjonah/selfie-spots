@@ -9,7 +9,7 @@ var app = app || {};
   var map;
   var coordinates;
 
-  mainView.initializeMap = function() {  
+  mainView.initializeMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
     });
@@ -33,15 +33,19 @@ var app = app || {};
 
   function showPosition() {
     map.setCenter(coordinates);
-    setMarker(coordinates);
+    mainView.setMarker(coordinates);
     showNearbySpots();
   }
 
-  function setMarker(coordinates, icon) {
+  mainView.setMarker = function(coordinates, icon) {
     var marker = new google.maps.Marker({
       position: coordinates,
       map: map,
       icon: icon
+    });
+
+    marker.addListener('click', function() {
+      console.log('hey');
     });
   }
 
@@ -51,7 +55,7 @@ var app = app || {};
       scale: 5 + selfieCount
     }
 
-    setMarker(coordinates, icon);
+    mainView.setMarker(coordinates, icon);
   }
 
   function showNearbySpots() {
