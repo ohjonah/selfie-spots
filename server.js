@@ -9,7 +9,7 @@ const app = express();
 
 const client = new pg.Client(process.env.CONNECTION_STRING);
 client.connect();
-client.on('error', err => console.error(err));
+client.on('error', console.error);
 
 app.use(express.static('./public'));
 
@@ -28,13 +28,25 @@ app.get('/ig/*', requestProxy({
     }
 }));
 
+app.get('/users/:id', function (request, response) {
+  client.query(`SELECT * FROM user WHERE user_id = ${req.params.id}`)
+        .then(result => response.send(result.rows))
+        .catch(processError)
+});
+
+function getUserData(id) {
+  
+}
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}.`));
 
 createTables();
 
 function createTables() {
   client.query(createTablesQuery, function(err, res) {
-    processError(err);
+    if (err) {
+      console.log(err.stack);
+    } 
   })
 }
 
@@ -56,11 +68,7 @@ let createTablesQuery =
   
   CREATE TABLE IF NOT EXISTS
   user_favorite (
-    user_id INTEGER REFERENCES user (user_id) ON UPDATE CASCADE,
+    user_id INTEGER REFERENCES user (user_id) ON UPDATE CASCADE ON DELETE CASCADE,
     location_id INTEGER REFERENCES location (location_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT user_favorite_pk PRIMARY KEY (user_id, location_id)
+    PRIMARY KEY (user_id, location_id)
   );`;
-
-function processError(err) {
-  console.error(err);
-}
