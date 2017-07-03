@@ -33,5 +33,10 @@ var app = app || {};
     return acc;
   }
 
+  // app.Spot.prototype.toHtml = function() {
+  //   let template = Handlebars.compile($('#spot-template').text());
+  //   return template(this);
+  // };
+
   module.Spot = Spot;
 })(app);
