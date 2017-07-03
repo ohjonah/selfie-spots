@@ -40,6 +40,12 @@ app.get('/favorites/:user_id', function (request, response) {
         .catch(processError)
 });
 
+app.get('/locations/:id', function (request, response) {
+  client.query(`SELECT * FROM location WHERE location_id = ${req.params.id}`)
+        .then(result => response.send(result.rows))
+        .catch(processError)
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}.`));
 
 createTables();
