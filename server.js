@@ -34,9 +34,11 @@ app.get('/users/:id', function (request, response) {
         .catch(processError)
 });
 
-function getUserData(id) {
-  
-}
+app.get('/favorites/:user_id', function (request, response) {
+  client.query(`SELECT location_id FROM user_favorite WHERE user_id = ${req.params.user_id}`)
+        .then(result => response.send(result.rows))
+        .catch(processError)
+});
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}.`));
 
