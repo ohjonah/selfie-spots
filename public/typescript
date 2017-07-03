@@ -1,49 +1,0 @@
-Script started on Mon Jul  3 12:41:19 2017
-l[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public]1;..-spots/public[0m[27m[24m[J[01;32m➜  [36mpublic[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;ls[1m[36mdata[39;49m[0m       [1m[36mscripts[39;49m[0m    typescript
-index.html [1m[36mstyles[39;49m[0m     [1m[36mvendor[39;49m[0m
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public]1;..-spots/public[0m[27m[24m[J[01;32m➜  [36mpublic[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;ls[1m[36mdata[39;49m[0m       [1m[36mscripts[39;49m[0m    typescript
-index.html [1m[36mstyles[39;49m[0m     [1m[36mvendor[39;49m[0m
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public]1;..-spots/public[0m[27m[24m[J[01;32m➜  [36mpublic[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hsscripts[?1l>[?2004l
-]2;scripts]1;scripts[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts]1;..ublic/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;ls[1m[36mcontrollers[39;49m[0m [1m[36mmodels[39;49m[0m      [1m[36mviews[39;49m[0m
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts]1;..ublic/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hvviews[?1l>[?2004l
-]2;views]1;views[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts/views]1;..scripts/views[0m[27m[24m[J[01;32m➜  [36mviews[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;lsmainView.js   markerView.js
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts/views]1;..scripts/views[0m[27m[24m[J[01;32m➜  [36mviews[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hmmv markervie   View.js spotView.j [Ks[?1l>[?2004l
-]2;mv markerView.js spotView.js]1;mv[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts/views]1;..scripts/views[0m[27m[24m[J[01;32m➜  [36mviews[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hnnon  nnodemon     n  lls[?1l>[?2004l
-]2;ls -G]1;lsmainView.js spotView.js
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts/views]1;..scripts/viewsc[0m[27m[24m[J[01;32m➜  [36mviews[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public/scripts]1;..ublic/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public]1;..-spots/public[0m[27m[24m[J[01;32m➜  [36mpublic[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;ls[1m[36mdata[39;49m[0m       [1m[36mscripts[39;49m[0m    typescript
-index.html [1m[36mstyles[39;49m[0m     [1m[36mvendor[39;49m[0m
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots/public]1;..-spots/public[0m[27m[24m[J[01;32m➜  [36mpublic[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots]1;../selfie-spots[0m[27m[24m[J[01;32m➜  [36mselfie-spots[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls -G]1;lsREADME.md         package-lock.json [1m[36mpublic[39;49m[0m
-[1m[36mnode_modules[39;49m[0m      package.json      server.js
-[1m[7m%[27m[1m[0m                                                             ]2;devjonah@Jonahs-MacBook-Pro: ~/codefellows/301/selfie-spots]1;../selfie-spots[0m[27m[24m[J[01;32m➜  [36mselfie-spots[00m [01;34mgit:([31mfeatures/overlay[34m) [33m✗[00m [K[?1h=[?2004hsserver.j      s  nnodemon server.js[?1l>[?2004l
-]2;nodemon server.js]1;nodemon[33m[nodemon] 1.11.0[39m
-[33m[nodemon] to restart at any time, enter `rs`[39m
-[33m[nodemon] watching: *.*[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node server.js`[39m
-Server started on port 3000.
