@@ -1,16 +1,36 @@
-html, body, main, section {
+html {
   height: 100%;
   width: 100%;
 }
 
+#main {
+  height: 93%;
+}
+
+body {
+  height: 100%;
+}
+
 header {
-  height: 4vw;
-  background: linear-gradient(to top left, $prime-color,;
+  height: 10%;
+  position: relative;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
   color: $white-color;
 }
 
 footer {
-  height: 2vw;
+  height: 5%;
   background: $prime-color;
   color: $white-color;
+}
+
+h1 {
+  font-family: $logo-font;
+  font-size: 6vw;
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  background: -webkit-radial-gradient($gray-color, $white-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
