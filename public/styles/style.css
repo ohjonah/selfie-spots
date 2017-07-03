@@ -20,14 +20,11 @@ footer {
   color: #fff; }
 
 h1 {
-  font-family: "Fugaz One", cursive;
+  font-family: "Righteous", cursive;
   font-size: 6vw;
   position: absolute;
   bottom: 0;
-  left: 2vw;
-  background: -webkit-radial-gradient(#ccc, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  left: 2vw; }
 
 #map {
   height: 100%; }
