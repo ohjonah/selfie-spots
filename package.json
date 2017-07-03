@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ohjonah/selfie-spots/issues"
   },
-  "homepage": "https://github.com/ohjonah/selfie-spots#readme"
+  "homepage": "https://github.com/ohjonah/selfie-spots#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
