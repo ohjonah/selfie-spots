@@ -2,3 +2,15 @@ html, body, main, section {
   height: 100%;
   width: 100%;
 }
+
+header {
+  height: 4vw;
+  background: linear-gradient(to top left, $prime-color,;
+  color: $white-color;
+}
+
+footer {
+  height: 2vw;
+  background: $prime-color;
+  color: $white-color;
+}
