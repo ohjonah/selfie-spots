@@ -20,7 +20,7 @@ header {
 
 footer {
   height: 5%;
-  background: $prime-color;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
   color: $white-color;
 }
 
@@ -28,6 +28,6 @@ h1 {
   font-family: $logo-font;
   font-size: 6vw;
   position: absolute;
-  bottom: 0;
+  bottom: 2vw;
   left: 2vw;
 }
