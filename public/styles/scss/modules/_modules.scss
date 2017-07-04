@@ -6,4 +6,24 @@
   .icon-menu {
     display: none;
   }
+
+  #menu {
+  display: inline-block;
+  position: absolute;
+  right: 12vw;
+  bottom: 3.6vw;
+
+    li {
+      display: inline-block;
+      margin-right: 2vw;
+    }
+  }
+
+  header p {
+    right: 2vw;
+  }
+
+  header p:hover {
+    color: $tert-color;
+  }
 }

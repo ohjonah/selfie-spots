@@ -31,3 +31,13 @@ h1 {
   bottom: 2vw;
   left: 2vw;
 }
+
+a {
+  font-family: $body-font;
+  text-decoration: none;
+  color: $white-color;
+}
+
+a:hover {
+  color: $tert-color;
+}

@@ -26,6 +26,14 @@ h1 {
   bottom: 2vw;
   left: 2vw; }
 
+a {
+  font-family: "Jaldi", sans-serif;
+  text-decoration: none;
+  color: #fff; }
+
+a:hover {
+  color: #FF8806; }
+
 .icon-camera {
   position: absolute;
   left: 36vw;
@@ -45,11 +53,29 @@ header p {
   right: 10vw;
   bottom: 3.5vw; }
 
+#menu {
+  display: none; }
+
 #map {
   height: 100%; }
 
 @media only screen and (min-width: 640px) {
   .icon-menu {
-    display: none; } }
+    display: none; }
+
+  #menu {
+    display: inline-block;
+    position: absolute;
+    right: 12vw;
+    bottom: 3.6vw; }
+    #menu li {
+      display: inline-block;
+      margin-right: 2vw; }
+
+  header p {
+    right: 2vw; }
+
+  header p:hover {
+    color: #FF8806; } }
 
 /*# sourceMappingURL=style.css.map */
