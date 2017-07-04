@@ -17,8 +17,8 @@ var app = app || {};
                               .map(s => new Spot(s));
       
       callback(Spot.all);
-    })
-  }
+    });
+  };
 
   function groupBySpot(acc, cur) {
     var spot = acc.find(l => l.id === cur.id);
