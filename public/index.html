@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="/styles/modules.css">
 
     <script id="spot-template" type="text/x-handlebars-template">
-      <div class="hidden">
-        <img src="http://placeholdit.com/50">
-				<h2>{{ locName }}</h2>
-				<p>{{ popScore }}</p>
-				<img src="{{ locUrl }}">
+      <div>
+        <img src="https://placehold.it/50x50">
+				<h2>{{ name }}</h2>
+				<p>{{ count }}</p>
       </div>
     </script>
   </head>
@@ -27,8 +26,8 @@
 
     <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
-    <script src="/scripts/views/spotView.js"></script>
     <script src="/scripts/models/spot.js"></script>
+    <script src="/scripts/views/spotView.js"></script>
     <script src="/scripts/views/mainView.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6fw1p5uhT9OyIwuA92ioB1W_pAbTIjho&callback=app.mainView.initializeMap"></script>
   </body>

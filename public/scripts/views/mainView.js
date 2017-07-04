@@ -46,9 +46,7 @@ var app = app || {};
 
     marker.locId = id;
 
-    marker.addListener('click', function() {
-      console.log(marker.locId);
-    });
+    marker.addListener('click', () =>  app.spotView.searchByLocId(marker.locId));
   }
 
   function setSpotMarker(coordinates, selfieCount, id) {
@@ -64,7 +62,6 @@ var app = app || {};
     app.Spot.fetchNearby(coordinates, function(spots) {
       spots.forEach(function(spot) {
         setSpotMarker({lat: spot.latitude, lng: spot.longitude}, spot.count, spot.id);
-        // console.log(spot.id);
       });
     });
   }

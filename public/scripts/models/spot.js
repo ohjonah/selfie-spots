@@ -17,8 +17,8 @@ var app = app || {};
                               .map(s => new Spot(s));
 
       callback(Spot.all);
-    })
-  }
+    });
+  };
 
   function groupBySpot(acc, cur) {
     var spot = acc.find(l => l.id === cur.id);
@@ -33,10 +33,14 @@ var app = app || {};
     return acc;
   }
 
-  // app.Spot.prototype.toHtml = function() {
-  //   let template = Handlebars.compile($('#spot-template').text());
-  //   return template(this);
-  // };
+  Spot.sumSelfieCount = function() {
+    var sum = Spot.all.map(spot => spot.count)
+                      .reduce((acc, curr) => acc + curr);
+
+    return sum;
+  };
+
+
 
   module.Spot = Spot;
 })(app);
