@@ -7,9 +7,8 @@ var app = app || {};
   let spotView = {};
 
   spotView.searchByLocId = function(locId) {
-    var spotIdMatch = app.Spot.all.find((spot) =>
-      (spot.id === locId)
-    );
+    var spotIdMatch = app.Spot.all.find((spot) => spot.id === locId);
+    spotIdMatch.popScore = app.Spot.calcPopScore(spotIdMatch);
 
     $('#spot-overlay').append(render(spotIdMatch));
   };

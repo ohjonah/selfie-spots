@@ -40,6 +40,19 @@ var app = app || {};
     return sum;
   };
 
+  Spot.calcPopScore = function(spotIdMatch) {
+    var popScore = spotIdMatch.count/app.Spot.sumSelfieCount();
+
+
+    if (popScore > 0.2) {
+      return 'Awesome Selfie Spot!';
+    } else if (popScore > 0.11 && popScore <= 0.20) {
+      return 'Acceptable Selfie Spot';
+    } else {
+      return 'Meh Selfie Spot';
+    }
+  }
+
 
 
   module.Spot = Spot;
