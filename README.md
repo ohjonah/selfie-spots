@@ -2,13 +2,20 @@
 Selfie Spots is an app that connect users to the most popular areas around their current location using aggregate data called from Instagram's API.
 
 # Table of Contents:
-1. MVP Technical Requirements
-2. User Stories
-3. Team Resources
+* ~~MVP Technical Requirements~~
+* V2 Technical Requirements
+* User Stories
+* Team Resources
 
-# MVP Technical Requirements:
-* Be able to pull and aggregate popular spots by hashtag and location from IG API
-* Display pulled data on maps using gMaps API
+# ~~MVP Technical Requirements:~~
+* ~~Be able to pull and aggregate popular spots by hashtag and location from IG API~~
+* ~~Display pulled data on maps using gMaps API~~
+
+# V2 Technical Requirements:
+* User Login to save favorites
+* Database needed and connected to front end
+* Landing with login: name + user email
+* Overlay w/ handlebars template
 
 # Stretch Goals
 * Saving favorite spots.
