@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="/styles/modules.css">
 
     <script id="spot-template" type="text/x-handlebars-template">
-      <div>
+      <div class="infowindow">
+        <div id="exit-overlay">X</div>
+        <section>
+          <h2>Selfie Spot: {{ name }}</h2>
+          <p>Selfies Taken: {{ count }}</p>
+          <p>Selfie Review: {{ popScore }}</p>
+        </section>
         <img src="https://placehold.it/50x50">
-				<h2>{{ name }}</h2>
-				<p>{{ count }}</p>
-        <p>{{ popScore }}</p>
       </div>
     </script>
   </head>
@@ -20,9 +23,8 @@
     <main>
       <section id="main">
         <div id="map"></div>
+        <div id="spot-overlay"></div>
       </section>
-
-			<section id="spot-overlay"></section>
     </main>
 
     <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>

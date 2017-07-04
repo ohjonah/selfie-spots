@@ -10,8 +10,16 @@ var app = app || {};
     var spotIdMatch = app.Spot.all.find((spot) => spot.id === locId);
     spotIdMatch.popScore = app.Spot.calcPopScore(spotIdMatch);
 
-    $('#spot-overlay').append(render(spotIdMatch));
+    spotView.initSpotView(spotIdMatch);
   };
+  //
+  // spotView.toggleClass = function(callback) {
+  //
+  // }
+
+  spotView.initSpotView = function(spotIdMatch) {
+    $('#spot-overlay').append(render(spotIdMatch));
+  }
 
   // private helper function to render to DOM
   var template = $('#spot-template').html();

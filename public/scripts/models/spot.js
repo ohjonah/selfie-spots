@@ -45,13 +45,13 @@ var app = app || {};
 
 
     if (popScore > 0.2) {
-      return 'Awesome Selfie Spot!';
+      return 'Awesome Spot!';
     } else if (popScore > 0.11 && popScore <= 0.20) {
-      return 'Acceptable Selfie Spot';
+      return 'Acceptable Spot';
     } else {
-      return 'Meh Selfie Spot';
+      return 'Meh Spot...';
     }
-  }
+  };
 
 
 
