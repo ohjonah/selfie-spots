@@ -59,8 +59,12 @@ function test(name, method, route, content) {
         console.log(error);
         console.log('Result: FAILED'); 
         reject(error);
+      } else if (Array.isArray(body) && body.length === 0) {
+        console.log('Response: ', body);
+        console.log('Result: FAILED');
+        reject();
       } else {
-        console.log('Body: ' + typeof body === 'object' ? Object.keys(body) : body);
+        console.log('Response: ', body);
         console.log('Result: PASSED');
         resolve();
       }
