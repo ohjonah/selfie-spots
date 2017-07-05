@@ -15,13 +15,15 @@ footer {
   color: $white-color;
 }
 
-.overlay {
+.login {
+  height: 35%;
+  background-color: rgba(196, 0, 232, 0.5);
+}
+
+.landing {
   margin-top: 0;
-  // max-width: 450px;
-  max-height: 35%;
-  background-color: rgba(152, 9, 178, .5);
+  height: 100%;
   text-align: center;
-  // border-radius: 10px;
   color: white;
   position: absolute;
   z-index: 10000;
@@ -29,8 +31,8 @@ footer {
 
 .map-protector {
   width: 100%;
-  height: 100%;
-  background-color: rgba(152, 9, 178, .1);
+  height: 65%;
+  background-color: rgba(196, 0, 232, .1);
   z-index: 9500;
   position: absolute;
 }

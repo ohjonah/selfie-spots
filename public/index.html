@@ -12,18 +12,18 @@
       <h1>Selfie Spots</h1>
     </header>
 
-    <section class="overlay">
-      <h1>Hi,</h1>
-      <form action="/sendtoken" method="POST">
-        Returning User
-        <input class="login-input" placeholder="Name" name="user" type="text">
-        <input class="login-input" placeholder="Email" name="user" type="text">
-        <input class="login-input" type="submit" value="Login">
-      </form>
+    <section class="landing">
+      <div class="login">
+        <h1>Hi,</h1>
+        <form>
+          Returning User
+          <input id="login-name" class="login-input" placeholder="Name" name="user" type="text">
+          <input id="login-email" class="login-input" placeholder="Email" name="email" type="text">
+          <input id="login-button" class="login-input" type="submit" value="Login">
+        </form>
+      </div>
+      <div class="map-protector"></div>
     </section>
-    <div class="map-protector">
-
-    </div>
 
     <section id="main">
       <div id="map"></div>
