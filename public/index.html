@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Selfie Spots</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
     <link rel="stylesheet" href="/vendor/styles/reset.css">
     <link rel="stylesheet" href="/vendor/styles/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Fugaz+One|Jaldi|Prompt|Righteous|Varela+Round" rel="stylesheet">
@@ -23,24 +24,25 @@
   </head>
 
   <body>
-    <main id="main">
+    <main>
       <header>
-        <h1>Selfie Spots</h1>
-
-        <span class="icon-camera"></span>
+        <div id="logo">
+          <h1>Selfie Spots</h1>
+          <span class="icon-camera"></span>
+        </div>
 
         <p><!--user name goes here-->Hi, Nick</p>
 
         <span class="icon-menu"></span>
 
         <nav id="menu">
-          <li><a href="#">Profile</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Favorites</a></li>
           <li><a href="#">Settings</a></li>
         </nav>
       </header>
 
-      <section id="main">
+      <section id="container">
         <div id="map"></div>
         <div id="spot-overlay"></div>
       </section>
