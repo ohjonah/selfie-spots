@@ -1,3 +1,39 @@
+html, body, main, section {
+  height: 100%;
+  width: 100%; }
+
+header {
+  height: 4vw;
+  background: linear-gradient(to top left, #9909B2, #CF00E8);
+  color: #fff; }
+
+footer {
+  height: 2vw;
+  background: #9909B2;
+  color: #fff; }
+
+.overlay {
+  margin-top: 0;
+  max-height: 35%;
+  background-color: rgba(152, 9, 178, 0.5);
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 10000; }
+
+.map-protector {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(152, 9, 178, 0.1);
+  z-index: 9500;
+  position: absolute; }
+
+.login-input {
+  border-radius: 2px;
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-width: 0; }
 html {
   height: 100%;
   width: 100%; }
@@ -72,6 +108,8 @@ header p {
 #map {
   height: 100%; }
 
+<<<<<<< HEAD
+=======
 .infowindow {
   width: 100%;
   height: 100%;
@@ -121,4 +159,5 @@ header p {
   .infowindow {
     width: 50%; } }
 
+>>>>>>> master
 /*# sourceMappingURL=style.css.map */
