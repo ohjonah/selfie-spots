@@ -5,6 +5,7 @@ html {
 
 #main {
   height: 93%;
+  position: relative;
 }
 
 body {
@@ -40,4 +41,10 @@ a {
 
 a:hover {
   color: $tert-color;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
