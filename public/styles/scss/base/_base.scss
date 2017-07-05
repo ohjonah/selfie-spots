@@ -3,9 +3,12 @@ html {
   width: 100%;
 }
 
-#main {
-  height: 93%;
-  position: relative;
+main {
+  height: 100%;
+}
+
+#container {
+  height: 85%;
 }
 
 body {
@@ -23,14 +26,6 @@ footer {
   height: 5%;
   background: linear-gradient(to bottom right, $prime-color, $second-color);
   color: $white-color;
-}
-
-h1 {
-  font-family: $logo-font;
-  font-size: 6vw;
-  position: absolute;
-  bottom: 2vw;
-  left: 2vw;
 }
 
 a {

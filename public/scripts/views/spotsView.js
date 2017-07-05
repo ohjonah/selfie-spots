@@ -4,21 +4,21 @@ var app = app || {};
 
 (function(module) {
 
-  let spotView = {};
+  let spotsView = {};
 
-  spotView.searchByLocId = function(locId) {
+  spotsView.searchByLocId = function(locId) {
     var spotIdMatch = app.Spot.all.find((spot) => spot.id === locId);
     spotIdMatch.popScore = app.Spot.calcPopScore(spotIdMatch);
 
-    spotView.initSpotView(spotIdMatch);
+    spotsView.initSpotView(spotIdMatch);
   };
 
-  spotView.initSpotView = function(spotIdMatch) {
+  spotsView.initSpotView = function(spotIdMatch) {
     $('#spot-overlay').append(render(spotIdMatch));
-    spotView.infowindowHandler();
+    spotsView.infowindowHandler();
   };
 
-  spotView.infowindowHandler = function() {
+  spotsView.infowindowHandler = function() {
     $('#exit-overlay').on('click', function() {
       $('.infowindow').remove();
     });
@@ -28,5 +28,5 @@ var app = app || {};
   var template = $('#spot-template').html();
   let render = Handlebars.compile(template);
 
-  module.spotView = spotView;
+  module.spotsView = spotsView;
 })(app);
