@@ -1,17 +1,30 @@
-html, body, main, section {
+html {
   height: 100%;
   width: 100%;
 }
 
+main {
+  height: 100%;
+}
+
+#container {
+  height: 85%;
+}
+
+body {
+  height: 100%;
+}
+
 header {
-  height: 4vw;
-  background: linear-gradient(to top left, $prime-color, $second-color);
+  height: 10%;
+  position: relative;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
   color: $white-color;
 }
 
 footer {
-  height: 2vw;
-  background: $prime-color;
+  height: 5%;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
   color: $white-color;
 }
 
@@ -41,4 +54,19 @@ footer {
   padding: 7px;
   display: block;
   border-width: 0;
+  
+a {
+  font-family: $body-font;
+  text-decoration: none;
+  color: $white-color;
+}
+
+a:hover {
+  color: $tert-color;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
