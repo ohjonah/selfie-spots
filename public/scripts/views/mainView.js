@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var app = app || {};
 
@@ -33,31 +33,35 @@ var app = app || {};
 
   function showPosition() {
     map.setCenter(coordinates);
-    setMarker(coordinates);
+    mainView.setMarker(coordinates);
     showNearbySpots();
   }
 
-  function setMarker(coordinates, icon) {
+  mainView.setMarker = function(coordinates, icon, id) {
     var marker = new google.maps.Marker({
       position: coordinates,
       map: map,
       icon: icon
     });
+
+    marker.locId = id;
+
+    marker.addListener('click', () =>  app.spotsView.searchByLocId(marker.locId));
   }
 
-  function setSpotMarker(coordinates, selfieCount) {
+  function setSpotMarker(coordinates, selfieCount, id) {
     var icon = {
       path: google.maps.SymbolPath.CIRCLE,
       scale: 5 + selfieCount
     };
 
-    setMarker(coordinates, icon);
+    mainView.setMarker(coordinates, icon, id);
   }
 
   function showNearbySpots() {
     app.Spot.fetchNearby(coordinates, function(spots) {
       spots.forEach(function(spot) {
-        setSpotMarker({ lat: spot.latitude, lng: spot.longitude}, spot.count);
+        setSpotMarker({lat: spot.latitude, lng: spot.longitude}, spot.count, spot.id);
       });
     });
   }

@@ -1,0 +1,40 @@
+header div {
+  position: absolute;
+  width: 75%;
+  left: 20px;
+  bottom: 25%;
+}
+
+h1 {
+  font-family: $logo-font;
+  font-size: 2.5em;
+  display: inline;
+}
+
+.icon-camera {
+  font-size: 2.25em;
+}
+
+.icon-menu {
+  position: absolute;
+  right: 15px;
+  bottom: 25%;
+  font-size: 2.5em;
+}
+
+header p {
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.25em;
+  position: absolute;
+  right: 65px;
+  bottom: 36%;
+}
+
+#menu {
+  display: none;
+}
+
+.spacer {
+  margin: 20px;
+}
+
