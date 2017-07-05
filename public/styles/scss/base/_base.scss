@@ -1,52 +1,43 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-main {
+html, main, body {
   height: 100%;
 }
-#container {
+section {
   height: 85%;
 }
-body {
-  height: 100%;
+header, footer {
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
+  color: $white-color;
 }
 header {
   height: 10%;
   position: relative;
-  background: linear-gradient(to bottom right, $prime-color, $second-color);
-  color: $white-color;
 }
 footer {
   height: 5%;
-  background: linear-gradient(to bottom right, $prime-color, $second-color);
-  color: $white-color;
 }
-.overlay {
+#landing {
   margin-top: 0;
-  // max-width: 450px;
-  max-height: 35%;
   background-color: rgba(152, 9, 178, .5);
   text-align: center;
-  // border-radius: 10px;
   color: white;
   position: absolute;
   z-index: 10000;
 }
 .map-protector {
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-color: rgba(152, 9, 178, .1);
   z-index: 9500;
   position: absolute;
 }
-.login-input {
+.login input {
   border-radius: 2px;
   margin: 7px auto;
   padding: 7px;
   display: block;
   border-width: 0;
-
+  height: 35%;
+}
 a {
   font-family: $body-font;
   text-decoration: none;

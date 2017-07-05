@@ -1,24 +1,23 @@
-html, body, main, section {
-  height: 100%;
-  width: 100%; }
+html, main, body {
+  height: 100%; }
+
+section {
+  height: 85%; }
+
+header, footer {
+  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
+  color: #fff; }
 
 header {
-  height: 4vw;
-  background: linear-gradient(to top left, #9909B2, #CF00E8);
-  color: #fff; }
+  height: 10%;
+  position: relative; }
 
 footer {
-  height: 2vw;
-  background: #9909B2;
-  color: #fff; }
+  height: 5%; }
 
-.login {
-  height: 35%;
-  background-color: rgba(196, 0, 232, 0.5); }
-
-.landing {
+#landing {
   margin-top: 0;
-  height: 100%;
+  background-color: rgba(152, 9, 178, 0.5);
   text-align: center;
   color: white;
   position: absolute;
@@ -26,40 +25,18 @@ footer {
 
 .map-protector {
   width: 100%;
-  height: 65%;
-  background-color: rgba(196, 0, 232, 0.1);
+  height: 50%;
+  background-color: rgba(152, 9, 178, 0.1);
   z-index: 9500;
   position: absolute; }
 
-.login-input {
+.login input {
   border-radius: 2px;
   margin: 7px auto;
   padding: 7px;
   display: block;
-  border-width: 0; }
-html {
-  height: 100%;
-  width: 100%; }
-
-main {
-  height: 100%; }
-
-#container {
-  height: 85%; }
-
-body {
-  height: 100%; }
-
-header {
-  height: 10%;
-  position: relative;
-  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
-  color: #fff; }
-
-footer {
-  height: 5%;
-  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
-  color: #fff; }
+  border-width: 0;
+  height: 35%; }
 
 a {
   font-family: "Jaldi", sans-serif;
@@ -129,8 +106,6 @@ header p {
 .icon-menu.active {
   color: #FF8806; }
 
-<<<<<<< HEAD
-=======
 .infowindow {
   width: 100%;
   height: 100%;
@@ -196,6 +171,7 @@ header p {
 
   #menu.active li {
     margin: 0 3vw; } }
+.hidden {
+  display: none; }
 
->>>>>>> master
 /*# sourceMappingURL=style.css.map */

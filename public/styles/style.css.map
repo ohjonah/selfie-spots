@@ -1,6 +1,0 @@
-{
-"version": 3,
-"sources": ["scss/base/_base.scss","scss/base/_vars.scss","scss/layout/_layout.scss","scss/modules/_modules.scss"],
-"names": [],
-"file": "style.css"
-}
