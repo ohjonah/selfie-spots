@@ -8,12 +8,12 @@ var app = app || {};
   view.menuToggle = () => {
     var $menu = $('#menu');
     var $hamburger = $('.icon-menu');
-    var $cross = $('.icon-cross');
 
-    $hamburger.on('click', function(e){
-      
+    $hamburger.on('click', function(){
+      $menu.toggleClass('active');
+      $hamburger.toggleClass('active');
     });
-  };
+};
 
-  view.module = view;
+  module.view = view;
 })(app);
