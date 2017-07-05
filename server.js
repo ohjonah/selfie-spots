@@ -27,8 +27,8 @@ app.get('/home', function (request, response) {
 
 app.get('/ig/*', requestProxy({
   url: 'https://api.instagram.com/v1/*',
-  query: { 
-    access_token: process.env.INSTAGRAM_TOKEN 
+  query: {
+    access_token: process.env.INSTAGRAM_TOKEN
   }
 }));
 
@@ -110,14 +110,14 @@ function ensureTables() {
         .catch(console.error);
 }
 
-let ensureTablesQuery = 
+let ensureTablesQuery =
  `CREATE TABLE IF NOT EXISTS
   users (
     user_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL
   );
-  
+
   CREATE TABLE IF NOT EXISTS
   locations (
     location_id BIGINT PRIMARY KEY,
@@ -125,7 +125,7 @@ let ensureTablesQuery =
     longitude DECIMAL NOT NULL,
     name VARCHAR(255)
   );
-  
+
   CREATE TABLE IF NOT EXISTS
   user_favorites (
     user_id INTEGER REFERENCES users (user_id) ON UPDATE CASCADE ON DELETE CASCADE,
@@ -133,41 +133,41 @@ let ensureTablesQuery =
     PRIMARY KEY (user_id, location_id)
   );`;
 
-let selectUserQuery = 
- `SELECT * FROM users 
+let selectUserQuery =
+ `SELECT * FROM users
   WHERE user_id = $1;`;
 
-let selectUserFavoritesQuery = 
- `SELECT location_id FROM user_favorites 
+let selectUserFavoritesQuery =
+ `SELECT location_id FROM user_favorites
   WHERE user_id = $1;`;
 
-let selectLocationQuery = 
- `SELECT * FROM locations 
+let selectLocationQuery =
+ `SELECT * FROM locations
   WHERE location_id = $1;`;
 
-let updateUserQuery = 
- `UPDATE users 
+let updateUserQuery =
+ `UPDATE users
   SET name = $1, email = $2
   WHERE user_id = $3;`;
 
-let insertUserQuery = 
- `INSERT INTO users(name, email) 
+let insertUserQuery =
+ `INSERT INTO users(name, email)
   VALUES($1, $2) ON CONFLICT DO NOTHING;`;
 
-let insertLocationQuery = 
+let insertLocationQuery =
  `INSERT INTO locations(location_id, latitude, longitude, name)
   VALUES($1, $2::decimal, $3::decimal, $4) ON CONFLICT DO NOTHING;`;
 
-let insertFavoriteQuery = 
- `INSERT INTO user_favorites(user_id, location_id) 
+let insertFavoriteQuery =
+ `INSERT INTO user_favorites(user_id, location_id)
   VALUES($1, $2) ON CONFLICT DO NOTHING;`;
 
-let deleteUserQuery = 
- `DELETE FROM users 
+let deleteUserQuery =
+ `DELETE FROM users
   WHERE user_id = $1;`;
 
-let deleteFavoriteQuery = 
- `DELETE FROM user_favorites 
+let deleteFavoriteQuery =
+ `DELETE FROM user_favorites
   WHERE user_id = $1 AND location_id = $2;`;
 
 let deleteLocationsQuery =
