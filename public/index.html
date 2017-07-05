@@ -2,21 +2,26 @@
 <html>
   <head>
     <title>Selfie Spots</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
     <link rel="stylesheet" href="/vendor/styles/reset.css">
     <link rel="stylesheet" href="/vendor/styles/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Fugaz+One|Jaldi|Prompt|Righteous|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/modules.css">
 
     <script id="spot-template" type="text/x-handlebars-template">
       <div class="infowindow">
-        <section>
-          <div id="exit-overlay">X</div>
-          <h2>Selfie Spot: {{ name }}</h2>
-          <p>Selfies Taken: {{ count }}</p>
-          <p>Selfie Review: {{ popScore }}</p>
-          <img src="https://placehold.it/50x50">
+        <span id="exit-overlay" class="icon-cross"></span>
+        <div class="clearfix"></div>
+
+        <section class="spacer">
+          <p>Selfie Spot:</p>
+          <p class="answer-styling">{{ name }}</p>
+          <div class="spacer">
+            <p>Selfies Taken:  <span class="answer-styling">{{ count }}</span></p>
+          </div>
+          <p>Selfie Review:</p>
+          <p class="answer-styling">{{ popScore }} </p>
+          <div class="icon-star-empty spacer"></div>
         </section>
       </div>
     </script>
@@ -29,23 +34,30 @@
   </head>
 
   <body>
-    <main id="main">
+    <main>
       <header>
-        <h1>Selfie Spots</h1>
-
-        <span class="icon-camera"></span>
+        <div id="logo">
+          <h1>Selfie Spots</h1>
+          <span class="icon-camera"></span>
+        </div>
 
         <p><!--user name goes here-->Hi, Nick</p>
 
         <span class="icon-menu"></span>
 
         <nav id="menu">
+<<<<<<< HEAD
           <li><a href="/favorites">Favorites</a></li>
           <li><a href="/settings">Settings</a></li>
+=======
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li><a href="#">Settings</a></li>
+>>>>>>> master
         </nav>
       </header>
 
-      <section id="main">
+      <section id="container">
         <div id="map"></div>
         <div id="spot-overlay"></div>
       </section>
