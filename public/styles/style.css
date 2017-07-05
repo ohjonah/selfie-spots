@@ -66,7 +66,7 @@ header p {
   display: none; }
 
 .spacer {
-  margin: 20px; }
+  margin: 30px; }
 
 #map {
   height: 100%; }
@@ -88,15 +88,23 @@ header p {
   cursor: pointer; }
 
 .infowindow p {
-  font-size: 3em; }
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.5em;
+  color: #C400E8; }
 
-.answer-styling {
+p.answer-styling {
+  font-family: "Exo 2", sans-serif;
   font-weight: bold;
-  font-style: italic;
-  text-decoration: underline; }
+  font-size: 2.5em;
+  color: #fff; }
 
 .icon-star-empty {
-  font-size: 3em; }
+  font-size: 3em;
+  color: yellow; }
+
+.icon-star-full {
+  font-size: 3em;
+  color: yellow; }
 
 @media only screen and (min-width: 640px) {
   .icon-menu {
