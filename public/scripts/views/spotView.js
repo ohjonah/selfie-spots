@@ -12,14 +12,17 @@ var app = app || {};
 
     spotView.initSpotView(spotIdMatch);
   };
-  //
-  // spotView.toggleClass = function(callback) {
-  //
-  // }
 
   spotView.initSpotView = function(spotIdMatch) {
     $('#spot-overlay').append(render(spotIdMatch));
-  }
+    spotView.infowindowHandler();
+  };
+
+  spotView.infowindowHandler = function() {
+    $('#exit-overlay').on('click', function() {
+      $('.infowindow').remove();
+    });
+  };
 
   // private helper function to render to DOM
   var template = $('#spot-template').html();
