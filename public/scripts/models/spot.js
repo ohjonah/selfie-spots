@@ -11,14 +11,14 @@ var app = app || {};
   Spot.all = [];
 
   Spot.fetchNearby = function(coordinates, callback) {
-    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}`, function(spotData) {
+    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function(spotData) {
       Spot.all = spotData.data.map(s => s.location)
                               .reduce(groupBySpot, [])
                               .map(s => new Spot(s));
-      
+
       callback(Spot.all);
-    })
-  }
+    });
+  };
 
   function groupBySpot(acc, cur) {
     var spot = acc.find(l => l.id === cur.id);
