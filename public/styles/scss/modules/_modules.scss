@@ -7,7 +7,7 @@
   height: 100%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.8);
   text-align: center;
   font-family: $body-font;
   color: white;
@@ -63,5 +63,6 @@
 @media only screen and (min-width: 740px) {
   .infowindow {
     width: 50%;
+    height: 100%;
   }
 }
