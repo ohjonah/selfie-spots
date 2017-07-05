@@ -15,7 +15,7 @@ var app = app || {};
       Spot.all = spotData.data.map(s => s.location)
                               .reduce(groupBySpot, [])
                               .map(s => new Spot(s));
-      
+
       callback(Spot.all);
     });
   };

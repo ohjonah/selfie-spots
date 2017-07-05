@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 93%;
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  height: 10%;
+  position: relative;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
+  color: $white-color;
+}
+
+footer {
+  height: 5%;
+  background: linear-gradient(to bottom right, $prime-color, $second-color);
+  color: $white-color;
+}
+
+h1 {
+  font-family: $logo-font;
+  font-size: 6vw;
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+}
+
+a {
+  font-family: $body-font;
+  text-decoration: none;
+  color: $white-color;
+}
+
+a:hover {
+  color: $tert-color;
+}

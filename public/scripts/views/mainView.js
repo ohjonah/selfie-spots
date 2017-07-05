@@ -9,7 +9,7 @@ var app = app || {};
   var map;
   var coordinates;
 
-  mainView.initializeMap = function() {  
+  mainView.initializeMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
     });
