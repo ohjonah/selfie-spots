@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Selfie Spots</title>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/vendor/styles/reset.css">
     <link rel="stylesheet" href="/vendor/styles/icomoon/style.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Fugaz+One|Jaldi|Prompt|Righteous|Varela+Round" rel="stylesheet">
@@ -52,18 +52,18 @@
         </nav>
       </header>
 
-      <section class="overlay">
-      <h1>Hi,</h1>
-      <form action="/sendtoken" method="POST">
-        Returning User
-        <input class="login-input" placeholder="Name" name="user" type="text">
-        <input class="login-input" placeholder="Email" name="user" type="text">
-        <input class="login-input" type="submit" value="Login">
-      </form>
-    </section>
-      <div class="map-protector">
-
-      </div>
+      <section class="landing">
+        <div class="login">
+          <h1>Hi,</h1>
+          <form>
+            Returning User
+            <input id="login-name" class="login-input" placeholder="Name" name="user" type="text">
+            <input id="login-email" class="login-input" placeholder="Email" name="email" type="text">
+            <input id="login-button" class="login-input" type="submit" value="Login">
+          </form>
+        </div>
+        <div class="map-protector"></div>
+      </section>
 
       <section id="container">
         <div id="map"></div>
@@ -71,7 +71,7 @@
       </section>
 
       <section id="favorites">
-        
+
       </section>
 
       <footer></footer>
