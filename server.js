@@ -21,7 +21,15 @@ app.get('/', function (request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
-app.get('/home', function (request, response) {
+app.get('/favorites', function (request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
+app.get('/settings', function (request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
+app.get('/spots/*', function (request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
