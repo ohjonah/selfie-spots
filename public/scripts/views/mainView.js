@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var app = app || {};
 
@@ -9,7 +9,7 @@ var app = app || {};
   var map;
   var coordinates;
 
-  mainView.initializeMap = function() {  
+  mainView.initializeMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 16,
     });
@@ -19,7 +19,7 @@ var app = app || {};
     } else {
       showDefaultPosition();
     }
-  }
+  };
 
   function showDefaultPosition() {
     coordinates = defaultCoordinates;
@@ -49,7 +49,7 @@ var app = app || {};
     var icon = {
       path: google.maps.SymbolPath.CIRCLE,
       scale: 5 + selfieCount
-    }
+    };
 
     setMarker(coordinates, icon);
   }

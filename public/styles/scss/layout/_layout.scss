@@ -1,0 +1,26 @@
+
+.icon-camera {
+  position: absolute;
+  left: 36vw;
+  bottom: 2.25vw;
+  font-size: 5vw;
+}
+
+.icon-menu {
+  position: absolute;
+  right: 2vw;
+  bottom: 2.5vw;
+  font-size: 6vw;
+}
+
+header p {
+  font-family: $body-font;
+  font-size: 3vw;
+  position: absolute;
+  right: 10vw;
+  bottom: 3.5vw;
+}
+
+#menu {
+  display: none;
+}
