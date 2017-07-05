@@ -5,7 +5,7 @@ html, body, main, section {
 
 header {
   height: 4vw;
-  background: linear-gradient(to top left, $prime-color,;
+  background: linear-gradient(to top left, $prime-color, $second-color);
   color: $white-color;
 }
 
@@ -13,4 +13,16 @@ footer {
   height: 2vw;
   background: $prime-color;
   color: $white-color;
+}
+
+.overlay {
+  // margin: auto;
+  // max-width: 450px;
+  max-height: 125px;
+  background-color: #9809b2;
+  text-align: center;
+  // border-radius: 10px;
+  color: white;
+  position: absolute;
+  z-index: 10000;
 }
