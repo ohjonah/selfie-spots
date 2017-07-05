@@ -28,6 +28,33 @@ footer {
   color: $white-color;
 }
 
+.overlay {
+  margin-top: 0;
+  // max-width: 450px;
+  max-height: 35%;
+  background-color: rgba(152, 9, 178, .5);
+  text-align: center;
+  // border-radius: 10px;
+  color: white;
+  position: absolute;
+  z-index: 10000;
+}
+
+.map-protector {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(152, 9, 178, .1);
+  z-index: 9500;
+  position: absolute;
+}
+
+.login-input {
+  border-radius: 2px;
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-width: 0;
+  
 a {
   font-family: $body-font;
   text-decoration: none;
