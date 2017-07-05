@@ -16,10 +16,14 @@
       <h1>Hi,</h1>
       <form action="/sendtoken" method="POST">
         Returning User
-        <br><input name="user" type="text">
-        <br><input type="submit" value="Login">
+        <input class="login-input" placeholder="Name" name="user" type="text">
+        <input class="login-input" placeholder="Email" name="user" type="text">
+        <input class="login-input" type="submit" value="Login">
       </form>
     </section>
+    <div class="map-protector">
+
+    </div>
 
     <section id="main">
       <div id="map"></div>
@@ -27,9 +31,9 @@
 
     <footer></footer>
   </main>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc-PXNJF7FQIv8rmGM3QaeUV10T5JiceQ&callback=app.mainView.initializeMap"></script>
   <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
   <script src="/scripts/models/spot.js"></script>
   <script src="/scripts/views/mainView.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc-PXNJF7FQIv8rmGM3QaeUV10T5JiceQ&callback=app.mainView.initializeMap"></script>
 </body>
 </html>
