@@ -13,7 +13,7 @@ var app = app || {};
       $menu.toggleClass('active');
       $hamburger.toggleClass('active');
     });
-};
+  };
 
   module.view = view;
 })(app);
