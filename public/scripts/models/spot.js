@@ -53,6 +53,13 @@ var app = app || {};
     }
   };
 
+  // Spot.prototype.addToFavorites = function(callback)
+  //   {
+  //     $.post('/favorites', {name: this.name, count: this.count, popScore: this.popScore})
+  //     .then(console.log)
+  //     .then(callback);
+  //   }
+
 
 
   module.Spot = Spot;
