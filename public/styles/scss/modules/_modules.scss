@@ -1,5 +1,12 @@
 #map {
   height: 100%;
+  position: relative;
+}
+
+#menu:active {
+  height: 20%;
+  display: block;
+  color: $white-color;
 }
 
 @media only screen and (min-width: 640px) {
