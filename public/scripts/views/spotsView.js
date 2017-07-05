@@ -28,5 +28,5 @@ var app = app || {};
   var template = $('#spot-template').html();
   let render = Handlebars.compile(template);
 
-  module.spotView = spotsView;
+  module.spotsView = spotsView;
 })(app);
