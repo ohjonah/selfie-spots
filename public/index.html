@@ -41,7 +41,7 @@
           <span class="icon-camera"></span>
         </div>
 
-        <p><!--user name goes here-->Hi, Nick</p>
+        <p id="name"></p>
 
         <span class="icon-menu"></span>
 
@@ -52,14 +52,13 @@
         </nav>
       </header>
 
-      <section id="landing" class="hidden">
+      <section id="landing">
         <div class="login">
           <h1>Hi,</h1>
           <form>
-            Returning User
             <input id="login-name" placeholder="Name" name="user" type="text">
             <input id="login-email" placeholder="Email" name="email" type="text">
-            <input id="login-button" type="submit" value="Login">
+            <input id="login-button" type="button" value="Login">
           </form>
         </div>
         <div class="map-protector"></div>
@@ -82,11 +81,13 @@
     <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/scripts/models/user.js"></script>
     <script src="/scripts/models/spot.js"></script>
     <script src="/scripts/views/spotsView.js"></script>
     <script src="/scripts/views/mainView.js"></script> 
     <script src="/scripts/views/view.js"></script>
     <script src="/scripts/views/favoritesView.js"></script>
+    <script src="/scripts/controllers/landingController.js"></script>
     <script src="/scripts/controllers/mainController.js"></script>
     <script src="/scripts/controllers/favoritesController.js"></script>
     <script src="/scripts/controllers/spotsController.js"></script>
