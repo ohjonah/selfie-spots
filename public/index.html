@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>Selfie Spots</title>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/vendor/styles/reset.css">
-    <link rel="stylesheet" href="/vendor/styles/icomoon/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Fugaz+One|Jaldi|Prompt|Righteous|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/styles/icomoon.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Jaldi|Righteous" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
 
     <script id="spot-template" type="text/x-handlebars-template">
@@ -52,26 +52,28 @@
         </nav>
       </header>
 
-      <section class="overlay">
-      <h1>Hi,</h1>
-      <form action="/sendtoken" method="POST">
-        Returning User
-        <input class="login-input" placeholder="Name" name="user" type="text">
-        <input class="login-input" placeholder="Email" name="user" type="text">
-        <input class="login-input" type="submit" value="Login">
-      </form>
-    </section>
-      <div class="map-protector">
-
-      </div>
-
-      <section id="container">
-        <div id="map"></div>
-        <div id="spot-overlay"></div>
+      <section id="landing" class="hidden">
+        <div class="login">
+          <h1>Hi,</h1>
+          <form>
+            Returning User
+            <input id="login-name" placeholder="Name" name="user" type="text">
+            <input id="login-email" placeholder="Email" name="email" type="text">
+            <input id="login-button" type="submit" value="Login">
+          </form>
+        </div>
+        <div class="map-protector"></div>
       </section>
 
-      <section id="favorites">
-        
+      <section id="main">
+        <div id="map"></div>
+      </section>
+
+      <section id="spots" class="hidden">
+      </section>
+
+      <section id="favorites" class="hidden">
+
       </section>
 
       <footer></footer>
@@ -91,8 +93,5 @@
     <script src="/scripts/controllers/settingsController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc-PXNJF7FQIv8rmGM3QaeUV10T5JiceQ&callback=app.mainView.initializeMap"></script>
-    <script type="text/javascript">
-      app.view.menuToggle();
-    </script>
   </body>
 </html>
