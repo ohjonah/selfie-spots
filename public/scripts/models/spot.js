@@ -12,7 +12,10 @@ var app = app || {};
 
   Spot.fetchNearby = function(coordinates, callback) {
     $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function(spotData) {
-      Spot.all = spotData.data.map(s => s.location)
+      Spot.all = spotData.data.map(s => {
+        s.location.images = [s.images.thumbnail];
+        return s.location;
+      })
                               .reduce(groupBySpot, [])
                               .map(s => new Spot(s));
 
@@ -25,7 +28,7 @@ var app = app || {};
       var favoriteSpots = favoritesData.filter(f => app.Spot.all.any(s => f.location_id === s.location_id))
                                        .reduce(groupBySpot, [])
                                        .map(s => new Spot(s));
-      
+
       favoriteSpots.forEach(Spot.all.push);
 
       callback(favoriteSpots);
@@ -37,6 +40,7 @@ var app = app || {};
 
     if (spot) {
       spot.count++;
+      spot.images = spot.images.concat(cur.images);
     } else {
       cur.count = 1;
       acc.push(cur);
