@@ -79,6 +79,17 @@
   header p:hover {
     color: $tert-color;
   }
+
+  #favorites {
+    text-align: left;
+  }
+
+  .favorite {
+    width: 45vw;
+    .icon-star-full:hover {
+      color: black;
+    }
+  }
 }
 
 @media only screen and (min-width: 740px) {
