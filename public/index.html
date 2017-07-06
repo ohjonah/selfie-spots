@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Selfie Spots</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/vendor/styles/reset.css">
-    <link rel="stylesheet" href="/vendor/styles/icomoon.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Jaldi|Righteous" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
+<head>
+  <title>Selfie Spots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/vendor/styles/reset.css">
+  <link rel="stylesheet" href="/vendor/styles/icomoon.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2|Jaldi|Righteous" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
 
-    <script id="spot-template" type="text/x-handlebars-template">
-      <div class="infowindow">
-        <span id="exit-overlay" class="icon-cross"></span>
-        <div class="clearfix"></div>
+  <script id="spot-template" type="text/x-handlebars-template">
+    <div class="infowindow">
+      <span id="exit-overlay" class="icon-cross"></span>
+      <div class="clearfix"></div>
 
-        <section class="spacer">
-          <p>SELFIE SPOT</p>
-          <p class="answer-styling">{{ name }}</p>
-          <div class="spacer">
-            <p>SELFIES TAKEN</p>
-            <p class="answer-styling">{{ count }}</p>
-          </div>
-          <p>SELFIE SUMMARY</p>
-          <p class="answer-styling">{{ popScore }} </p>
-          <div id="favorite-btn" class="icon-star-empty spacer"></div>
-        </section>
-      </div>
-    </script>
-
-    <script id="favorite-template" type="text/x-handlebars-template">
-      <div class="favorite">
-      </span><span>{{name}}</span><a data-id="{{id}}" href="#"><span class="icon-star-full"></span></a>
-      </div>
-    </script>
-  </head>
-
-  <body>
-    <main>
-      <header>
-        <div id="logo">
-          <h1>Selfie Spots</h1>
-          <span class="icon-camera"></span>
+      <section class="spacer">
+        <p>SELFIE SPOT</p>
+        <p class="answer-styling">{{ name }}</p>
+        <div class="spacer">
+          <p>SELFIES TAKEN</p>
+          <p class="answer-styling">{{ count }}</p>
         </div>
-
-        <p id="name"></p>
-
-        <span class="icon-menu"></span>
-
-        <nav id="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/favorites">Favorites</a></li>
-          <li><a href="/settings">Settings</a></li>
-        </nav>
-      </header>
-
-      <section id="landing">
-        <div class="login">
-          <h1>Hi,</h1>
-          <form>
-            <input id="login-name" placeholder="Name" name="user" type="text">
-            <input id="login-email" placeholder="Email" name="email" type="text">
-            <input id="login-button" type="button" value="Login">
-          </form>
-        </div>
-        <div class="map-protector"></div>
+        <p>SELFIE SUMMARY</p>
+        <p class="answer-styling">{{ popScore }} </p>
+        <div id="favorite-btn" class="icon-star-empty spacer"></div>
       </section>
+    </div>
+  </script>
 
-      <section id="main">
-        <div id="map"></div>
+  <script id="favorite-template" type="text/x-handlebars-template">
+    <div class="favorite">
+    </span><span>{{name}}</span><a data-id="{{id}}" href="#"><span class="icon-star-full"></span></a>
+  </div>
+</script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div id="logo">
+        <h1>Selfie Spots</h1>
+        <span class="icon-camera"></span>
+      </div>
+
+      <p id="name"></p>
+
+      <span class="icon-menu"></span>
+
+      <nav id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/favorites">Favorites</a></li>
+        <li><a href="/settings">Settings</a></li>
+      </nav>
+    </header>
+
+    <section id="landing">
+      <div class="login">
+        <h1>Hi,</h1>
+        <form>
+          <input id="login-name" placeholder="Name" name="user" type="text">
+          <input id="login-email" placeholder="Email" name="email" type="text">
+          <input id="login-button" type="button" value="Login">
+        </form>
+      </div>
+      <div class="map-protector"></div>
+    </section>
+
+    <section id="main">
+      <div id="map"></div>
+    </section>
+
+    <section id="spots" class="hidden"></section>
+
+    <section id="favorites" class="hidden"></section>
+
+    <!-- SETTINGS BLOCK -->
+    <section id="settings" class="hidden">
+      <p id="setting-text">SETTINGS</p>
+      <div class="underline"></div>
+      <input id="settings-name" placeholder="Name" name="user" type="text">
+      <input id="settings-email" placeholder="Email" name="email" type="text">
+      <input id="submit-button" type="submit" value="Submit">
+      <div id="warning-alert"> !WARNING!:
+        <br> THIS WILL DELETE ALL YOUR FAVORITES!</div>
+        <input id="delete-button" type="submit" value="*Delete Account*">
       </section>
-
-      <section id="spots" class="hidden"></section>
-
-      <section id="favorites" class="hidden"></section>
-
-      <section id="settings" class="hidden">
-
-      </section>
-
+      <!-- END SETTINGS BLOCK -->
       <footer></footer>
     </main>
 
@@ -98,4 +106,4 @@
     <script src="/scripts/controllers/routes.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc-PXNJF7FQIv8rmGM3QaeUV10T5JiceQ&callback=app.mainView.initializeMap"></script>
   </body>
-</html>
+  </html>
