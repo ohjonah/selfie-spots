@@ -2,7 +2,8 @@ html, main, body {
   height: 100%; }
 
 section {
-  height: 85%; }
+  height: 85%;
+  width: 100%; }
 
 header, footer {
   background: linear-gradient(to bottom right, #C400E8, #FF85D9);
@@ -16,19 +17,14 @@ footer {
   height: 5%; }
 
 #landing {
-  margin-top: 0;
-  background-color: rgba(152, 9, 178, 0.5);
   text-align: center;
   color: white;
   position: absolute;
-  z-index: 10000; }
+  z-index: 1; }
 
-.map-protector {
-  width: 100%;
-  height: 50%;
-  background-color: rgba(152, 9, 178, 0.1);
-  z-index: 9500;
-  position: absolute; }
+.login {
+  background-color: rgba(152, 9, 178, 0.5);
+  height: 35%; }
 
 .login input {
   border-radius: 2px;
@@ -37,6 +33,10 @@ footer {
   display: block;
   border-width: 0;
   height: 35%; }
+
+.map-protector {
+  background-color: rgba(152, 9, 178, 0.2);
+  height: 65%; }
 
 a {
   font-family: "Jaldi", sans-serif;

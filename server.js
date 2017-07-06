@@ -21,6 +21,10 @@ app.get('/', function (request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
+app.get('/main', function (request, response) {
+  response.sendFile('index.html', {root: './public'});
+});
+
 app.get('/favorites', function (request, response) {
   response.sendFile('index.html', {root: './public'});
 });
@@ -39,6 +43,11 @@ app.get('/ig/*', requestProxy({
     access_token: process.env.INSTAGRAM_TOKEN
   }
 }));
+
+app.get('/users/search', function (request, response) {
+  client.query(selectUserSearchQuery, [request.query.name, request.query.email])
+        .then(result => response.send(result.rows), console.error);
+});
 
 app.get('/users/:id', function (request, response) {
   client.query(selectUserQuery, [request.params.id])
@@ -62,7 +71,7 @@ app.put('/users/:id', function(request, response) {
 
 app.post('/users', function(request, response) {
   client.query(insertUserQuery, [request.body.name, request.body.email])
-        .then(() => response.send("User created."), console.error);
+        .then(result => response.send("User created."), console.error);
 });
 
 app.post('/users/:id/favorites', function (request, response) {
@@ -144,6 +153,10 @@ let ensureTablesQuery =
 let selectUserQuery =
  `SELECT * FROM users
   WHERE user_id = $1;`;
+
+let selectUserSearchQuery =
+ `SELECT * FROM users
+  WHERE name = $1 AND email = $2;`;
 
 let selectUserFavoritesQuery =
  `SELECT location_id FROM user_favorites

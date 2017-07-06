@@ -5,9 +5,17 @@ var app = app || {};
 (function(module) {
 
   var mainView = {};
+
   const defaultCoordinates = {lat: 47.6182, lng: -122.3519};
+
   var map;
   var coordinates;
+
+  mainView.index = function() {
+    $('#name').text(app.User.name);
+    $('section').addClass('hidden');
+    $('#main').removeClass('hidden');
+  };
 
   mainView.initializeMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
