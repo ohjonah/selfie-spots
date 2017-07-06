@@ -16,8 +16,16 @@ var app = app || {};
 
   spotsView.initSpotView = function(spotIdMatch) {
     $('#spots').empty().append(render(spotIdMatch));
+
+    $.get(`/users/${app.User.id}/favorites`)
+     .then(data => {
+       if (data.includes(spotIdMatch.id)) {
+         $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
+       }
+     });
+
     spotsView.infowindowHandler();
-    spotsView.favoritesHandler();
+    spotsView.favoritesHandler(spotIdMatch.id);
   };
 
   spotsView.infowindowHandler = function() {
@@ -26,9 +34,26 @@ var app = app || {};
     });
   };
 
-  spotsView.favoritesHandler = function() {
-    $('#favorite-btn').on('click', function() {
-      $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
+  spotsView.favoritesHandler = function(spotId) {
+    $('#favorite-btn').on('click', e => {
+      $.get(`/users/${app.User.id}/favorites`)
+      .then(data => data.includes(spotId))
+      .toggleClass('icon-star-full')
+
+
+
+
+      e.preventDefault();
+      $.ajax({
+        method: "POST",
+        url: `/users/${app.User.id}/favorites`,
+
+        data: {
+          location_id: spotId;
+        }
+      }).done( () => {
+        $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
+      })
     })
   }
 
