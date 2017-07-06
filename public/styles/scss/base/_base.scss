@@ -5,38 +5,6 @@ section {
   height: 85%;
   width: 100%;
 }
-header, footer {
-  background: linear-gradient(to bottom right, $prime-color, $second-color);
-  color: $white-color;
-}
-header {
-  height: 10%;
-  position: relative;
-}
-footer {
-  height: 5%;
-}
-#landing {
-  text-align: center;
-  color: white;
-  position: absolute;
-  z-index: 1;
-}
-.login {
-  background-color: rgba(152, 9, 178, .5);
-  height: 35%;
-}
-.login input {
-  border-radius: 2px;
-  margin: 7px auto;
-  padding: 7px;
-  display: block;
-  border-width: 0;
-}
-.map-protector {
-  background-color: rgba(152, 9, 178, .2);
-  height: 65%;
-}
 a {
   font-family: $body-font;
   text-decoration: none;
@@ -44,9 +12,4 @@ a {
 }
 a:hover {
   color: $tert-color;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }

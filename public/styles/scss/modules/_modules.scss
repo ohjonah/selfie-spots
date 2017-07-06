@@ -1,8 +1,22 @@
+//map for main view
 #map {
   height: 100%;
   position: relative;
 }
-
+//menu icons
+.icon-camera {
+  font-size: 2.25em;
+}
+.icon-menu {
+  position: absolute;
+  right: 15px;
+  bottom: 25%;
+  font-size: 2.5em;
+}
+//menu
+#menu {
+  display: none;
+}
 #menu.active {
   display: block;
   position: absolute;
@@ -19,48 +33,36 @@
     font-family: $header-font;
   }
 }
-
 .icon-menu.active {
   color: $tert-color;
 }
-
-.infowindow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: rgba(0,0,0,.6);
-  text-align: center;
-  font-family: $body-font;
-  color: white;
+//for screens smaller than 456px
+@media only screen and (max-width: 456px) {
+  h1 {
+    font-size: 2em;
+  }
+  .icon-camera {
+    font-size: 1.8em;
+  }
+  .icon-menu {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1em;
+    right: 56px;
+    bottom: 32%
+  }
+  #menu.active {
+    li {
+      margin: 0 3vw;
+    }
+  }
 }
-
-#exit-overlay {
-  float: right;
-  margin: 4%;
-  font-size: 3em;
-  cursor: pointer;
-}
-
-.infowindow p {
-  font-size: 3em;
-}
-
-.answer-styling {
-  font-weight: bold;
-  font-style: italic;
-  text-decoration: underline;
-}
-
-.icon-star-empty {
-  font-size: 3em;
-}
-
+//for screens larger than 640px
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
   }
-
   #menu {
   display: inline-block;
   position: absolute;
@@ -71,55 +73,107 @@
       margin-right: 10px;
     }
   }
-
   header p {
     right: 15px;
   }
-
   header p:hover {
     color: $tert-color;
   }
-
-  #favorites {
-    text-align: left;
-  }
-
-  .favorite {
-    width: 45vw;
-    .icon-star-full:hover {
-      color: black;
-    }
-  }
 }
-
+//info window
+.infowindow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,.6);
+  text-align: center;
+  font-family: $body-font;
+  color: white;
+}
+#exit-overlay {
+  float: right;
+  margin: 4%;
+  font-size: 3em;
+  cursor: pointer;
+}
+.infowindow p {
+  font-size: 3em;
+}
+.answer-styling {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+.icon-star-empty {
+  font-size: 3em;
+}
+//for screens larger than 740px
 @media only screen and (min-width: 740px) {
   .infowindow {
     width: 50%;
   }
 }
-
-@media only screen and (max-width: 456px) {
-  h1 {
-    font-size: 2em;
+//landing banner
+#landing {
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+.login {
+  background-color: rgba(152, 9, 178, .5);
+  height: 35%;
+}
+.login input {
+  border-radius: 2px;
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-width: 0;
+}
+.map-protector {
+  background-color: rgba(152, 9, 178, .2);
+  height: 65%;
+}
+.spacer {
+  margin: 20px;
+}
+//favorites page
+#favorites {
+  background-color: rgba(152, 9, 178, .1);
+  color: $white-color;
+  font-family: $header-font;
+  text-align: center;
+}
+.favorite {
+  width: 90vw;
+  position: relative;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  padding: 2vw 1vw;
+  display: inline-block;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  font-size: 3.5vw;
+  background: linear-gradient(to bottom right, $prime-color, $tert-color);
+  a {
+    position: absolute;
+    right: 1vw;
+    .icon-star-full {
+      color: yellow;
+    }
   }
-
-  .icon-camera {
-    font-size: 1.8em;
+}
+//screens larger than 640px
+@media only screen and (min-width: 640px) {
+  #favorites {
+    text-align: left;
   }
-
-  .icon-menu {
-    font-size: 2em;
-  }
-
-  header p {
-    font-size: 1em;
-    right: 56px;
-    bottom: 32%
-  }
-
-  #menu.active {
-    li {
-      margin: 0 3vw;
+  .favorite {
+    width: 45vw;
+    .icon-star-full:hover {
+      color: black;
     }
   }
 }

@@ -5,6 +5,14 @@ section {
   height: 85%;
   width: 100%; }
 
+a {
+  font-family: "Jaldi", sans-serif;
+  text-decoration: none;
+  color: #fff; }
+
+a:hover {
+  color: #FF8806; }
+
 header, footer {
   background: linear-gradient(to bottom right, #C400E8, #FF85D9);
   color: #fff; }
@@ -15,40 +23,6 @@ header {
 
 footer {
   height: 5%; }
-
-#landing {
-  text-align: center;
-  color: white;
-  position: absolute;
-  z-index: 1; }
-
-.login {
-  background-color: rgba(152, 9, 178, 0.5);
-  height: 35%; }
-
-.login input {
-  border-radius: 2px;
-  margin: 7px auto;
-  padding: 7px;
-  display: block;
-  border-width: 0; }
-
-.map-protector {
-  background-color: rgba(152, 9, 178, 0.2);
-  height: 65%; }
-
-a {
-  font-family: "Jaldi", sans-serif;
-  text-decoration: none;
-  color: #fff; }
-
-a:hover {
-  color: #FF8806; }
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
 
 header div {
   position: absolute;
@@ -61,6 +35,17 @@ h1 {
   font-size: 2.5em;
   display: inline; }
 
+header p {
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.25em;
+  position: absolute;
+  right: 65px;
+  bottom: 36%; }
+
+#map {
+  height: 100%;
+  position: relative; }
+
 .icon-camera {
   font-size: 2.25em; }
 
@@ -70,45 +55,8 @@ h1 {
   bottom: 25%;
   font-size: 2.5em; }
 
-header p {
-  font-family: "Jaldi", sans-serif;
-  font-size: 1.25em;
-  position: absolute;
-  right: 65px;
-  bottom: 36%; }
-
 #menu {
   display: none; }
-
-.spacer {
-  margin: 20px; }
-
-#favorites {
-  background-color: rgba(152, 9, 178, 0.1);
-  color: #fff;
-  font-family: "Exo 2", sans-serif;
-  text-align: center; }
-
-.favorite {
-  width: 90vw;
-  position: relative;
-  margin-left: 1.5vw;
-  margin-top: 2vw;
-  padding: 2vw 1vw;
-  display: inline-block;
-  border: solid 2px #fff;
-  border-radius: 3px;
-  font-size: 3.5vw;
-  background: linear-gradient(to bottom right, #C400E8, #FF8806); }
-  .favorite a {
-    position: absolute;
-    right: 1vw; }
-    .favorite a .icon-star-full {
-      color: yellow; }
-
-#map {
-  height: 100%;
-  position: relative; }
 
 #menu.active {
   display: block;
@@ -128,6 +76,41 @@ header p {
 .icon-menu.active {
   color: #FF8806; }
 
+@media only screen and (max-width: 456px) {
+  h1 {
+    font-size: 2em; }
+
+  .icon-camera {
+    font-size: 1.8em; }
+
+  .icon-menu {
+    font-size: 2em; }
+
+  header p {
+    font-size: 1em;
+    right: 56px;
+    bottom: 32%; }
+
+  #menu.active li {
+    margin: 0 3vw; } }
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none; }
+
+  #menu {
+    display: inline-block;
+    position: absolute;
+    right: 85px;
+    bottom: 38%; }
+    #menu li {
+      display: inline-block;
+      margin-right: 10px; }
+
+  header p {
+    right: 15px; }
+
+  header p:hover {
+    color: #FF8806; } }
 .infowindow {
   width: 100%;
   height: 100%;
@@ -155,25 +138,57 @@ header p {
 .icon-star-empty {
   font-size: 3em; }
 
-@media only screen and (min-width: 640px) {
-  .icon-menu {
-    display: none; }
+@media only screen and (min-width: 740px) {
+  .infowindow {
+    width: 50%; } }
+#landing {
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 1; }
 
-  #menu {
-    display: inline-block;
+.login {
+  background-color: rgba(152, 9, 178, 0.5);
+  height: 35%; }
+
+.login input {
+  border-radius: 2px;
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-width: 0; }
+
+.map-protector {
+  background-color: rgba(152, 9, 178, 0.2);
+  height: 65%; }
+
+.spacer {
+  margin: 20px; }
+
+#favorites {
+  background-color: rgba(152, 9, 178, 0.1);
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+  text-align: center; }
+
+.favorite {
+  width: 90vw;
+  position: relative;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  padding: 2vw 1vw;
+  display: inline-block;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  font-size: 3.5vw;
+  background: linear-gradient(to bottom right, #C400E8, #FF8806); }
+  .favorite a {
     position: absolute;
-    right: 85px;
-    bottom: 38%; }
-    #menu li {
-      display: inline-block;
-      margin-right: 10px; }
+    right: 1vw; }
+    .favorite a .icon-star-full {
+      color: yellow; }
 
-  header p {
-    right: 15px; }
-
-  header p:hover {
-    color: #FF8806; }
-
+@media only screen and (min-width: 640px) {
   #favorites {
     text-align: left; }
 
@@ -181,27 +196,12 @@ header p {
     width: 45vw; }
     .favorite .icon-star-full:hover {
       color: black; } }
-@media only screen and (min-width: 740px) {
-  .infowindow {
-    width: 50%; } }
-@media only screen and (max-width: 456px) {
-  h1 {
-    font-size: 2em; }
-
-  .icon-camera {
-    font-size: 1.8em; }
-
-  .icon-menu {
-    font-size: 2em; }
-
-  header p {
-    font-size: 1em;
-    right: 56px;
-    bottom: 32%; }
-
-  #menu.active li {
-    margin: 0 3vw; } }
 .hidden {
   display: none; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */
