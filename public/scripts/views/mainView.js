@@ -15,6 +15,8 @@ var app = app || {};
     $('#name').text(app.User.name);
     $('section').addClass('hidden');
     $('#main').removeClass('hidden');
+
+    app.view.menuToggle();
   };
 
   mainView.initializeMap = function() {

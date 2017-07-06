@@ -31,8 +31,7 @@ footer {
   margin: 7px auto;
   padding: 7px;
   display: block;
-  border-width: 0;
-  height: 35%; }
+  border-width: 0; }
 
 .map-protector {
   background-color: rgba(152, 9, 178, 0.2);
@@ -83,6 +82,29 @@ header p {
 
 .spacer {
   margin: 30px auto; }
+
+#favorites {
+  background-color: rgba(152, 9, 178, 0.1);
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+  text-align: center; }
+
+.favorite {
+  width: 90vw;
+  position: relative;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  padding: 2vw 1vw;
+  display: inline-block;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  font-size: 3.5vw;
+  background: linear-gradient(to bottom right, #C400E8, #FF8806); }
+  .favorite a {
+    position: absolute;
+    right: 1vw; }
+    .favorite a .icon-star-full {
+      color: yellow; }
 
 #map {
   height: 100%;
@@ -159,7 +181,15 @@ header p {
     right: 15px; }
 
   header p:hover {
-    color: #FF8806; } }
+    color: #FF8806; }
+
+  #favorites {
+    text-align: left; }
+
+  .favorite {
+    width: 45vw; }
+    .favorite .icon-star-full:hover {
+      color: black; } }
 @media only screen and (min-width: 740px) {
   #spots {
     width: 50%;
