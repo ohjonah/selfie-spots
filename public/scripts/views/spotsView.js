@@ -35,7 +35,9 @@ var app = app || {};
   };
 
   spotsView.favoritesHandler = function(spotId) {
-    $('#favorite-btn').on('click', () => {
+    $('#favorite-btn').on('click', function() {
+      console.log($(this));
+      
       if ($(this).hasClass('icon-star-empty')) {
         $.post(`/users/${app.User.id}/favorites`, {
           location_id: spotId
