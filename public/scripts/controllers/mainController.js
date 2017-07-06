@@ -6,7 +6,7 @@ var app = app || {};
   const mainController = {};
 
   mainController.index = function() {
-
+    app.mainView.index();
   };
 
   module.mainController = mainController;

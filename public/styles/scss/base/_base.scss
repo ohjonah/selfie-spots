@@ -3,6 +3,7 @@ html, main, body {
 }
 section {
   height: 85%;
+  width: 100%;
 }
 header, footer {
   background: linear-gradient(to bottom right, $prime-color, $second-color);
@@ -16,19 +17,14 @@ footer {
   height: 5%;
 }
 #landing {
-  margin-top: 0;
-  background-color: rgba(152, 9, 178, .5);
   text-align: center;
   color: white;
   position: absolute;
-  z-index: 10000;
+  z-index: 1;
 }
-.map-protector {
-  width: 100%;
-  height: 50%;
-  background-color: rgba(152, 9, 178, .1);
-  z-index: 9500;
-  position: absolute;
+.login {
+  background-color: rgba(152, 9, 178, .5);
+  height: 35%;
 }
 .login input {
   border-radius: 2px;
@@ -36,6 +32,11 @@ footer {
   padding: 7px;
   display: block;
   border-width: 0;
+}
+
+.map-protector {
+  background-color: rgba(152, 9, 178, .2);
+  height: 65%;
 }
 
 a {
