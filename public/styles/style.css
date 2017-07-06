@@ -82,7 +82,7 @@ header p {
   display: none; }
 
 .spacer {
-  margin: 20px; }
+  margin: 30px auto; }
 
 #map {
   height: 100%;
@@ -106,12 +106,12 @@ header p {
 .icon-menu.active {
   color: #FF8806; }
 
-.infowindow {
+#spots {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   font-family: "Jaldi", sans-serif;
   color: white; }
@@ -122,16 +122,25 @@ header p {
   font-size: 3em;
   cursor: pointer; }
 
-.infowindow p {
-  font-size: 3em; }
+#spots p {
+  font-family: "Jaldi", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  color: #C400E8; }
 
-.answer-styling {
+#spots .answer-styling {
+  font-family: "Exo 2", sans-serif;
   font-weight: bold;
-  font-style: italic;
-  text-decoration: underline; }
+  font-size: 2.5em;
+  color: #fff; }
 
 .icon-star-empty {
-  font-size: 3em; }
+  font-size: 3em;
+  color: yellow; }
+
+.icon-star-full {
+  font-size: 3em;
+  color: yellow; }
 
 @media only screen and (min-width: 640px) {
   .icon-menu {
@@ -152,8 +161,9 @@ header p {
   header p:hover {
     color: #FF8806; } }
 @media only screen and (min-width: 740px) {
-  .infowindow {
-    width: 50%; } }
+  #spots {
+    width: 50%;
+    height: 100%; } }
 @media only screen and (max-width: 456px) {
   h1 {
     font-size: 2em; }

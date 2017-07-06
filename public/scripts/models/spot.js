@@ -25,7 +25,7 @@ var app = app || {};
       var favoriteSpots = favoritesData.filter(f => app.Spot.all.any(s => f.location_id === s.location_id))
                                        .reduce(groupBySpot, [])
                                        .map(s => new Spot(s));
-      
+
       favoriteSpots.forEach(Spot.all.push);
 
       callback(favoriteSpots);
@@ -64,6 +64,13 @@ var app = app || {};
       return 'Meh Spot...';
     }
   };
+
+  // Spot.prototype.addToFavorites = function(callback)
+  //   {
+  //     $.post('/favorites', {name: this.name, count: this.count, popScore: this.popScore})
+  //     .then(console.log)
+  //     .then(callback);
+  //   }
 
 
 
