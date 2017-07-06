@@ -71,7 +71,7 @@ app.put('/users/:id', function(request, response) {
 
 app.post('/users', function(request, response) {
   client.query(insertUserQuery, [request.body.name, request.body.email])
-        .then(result => response.send("User created."), console.error);
+        .then(() => response.send("User created."), console.error);
 });
 
 app.post('/users/:id/favorites', function (request, response) {
