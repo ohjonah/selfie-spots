@@ -22,13 +22,11 @@ var app = app || {};
 
   Spot.fetchFavorites = function(userId, callback) {
     $.getJSON(`/users/${userId}/favorites`, function(favoritesData) {
-      console.log(favoritesData);
-      
       var favoriteSpots = app.Spot.all.filter(s => app.Spot.all.includes(favoritesData.id))
                                        .reduce(groupBySpot, [])
                                        .map(s => new Spot(s));
 
-      favoriteSpots.forEach(Spot.all.push);
+      favoriteSpots.forEach(e => Spot.all.push(e));
 
       callback(favoriteSpots);
     });
