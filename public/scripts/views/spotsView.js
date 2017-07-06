@@ -19,7 +19,7 @@ var app = app || {};
 
     $.get(`/users/${app.User.id}/favorites`)
      .then(data => {
-       if (data.includes(spotIdMatch.id)) {
+       if (data.find((spotId) => parseInt(spotId.location_id) === spotIdMatch.id)) {
          $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
        }
      });
@@ -35,26 +35,22 @@ var app = app || {};
   };
 
   spotsView.favoritesHandler = function(spotId) {
-    $('#favorite-btn').on('click', e => {
-      $.get(`/users/${app.User.id}/favorites`)
-      .then(data => data.includes(spotId))
-      .toggleClass('icon-star-full')
-
-
-
-
-      e.preventDefault();
-      $.ajax({
-        method: "POST",
-        url: `/users/${app.User.id}/favorites`,
-
-        data: {
-          location_id: spotId;
-        }
-      }).done( () => {
-        $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
-      })
-    })
+    $('#favorite-btn').on('click', () => {
+      if ($(this).hasClass('icon-star-empty')) {
+        $.post(`/users/${app.User.id}/favorites`, {
+          location_id: spotId
+        })
+      } else {
+        $.ajax({
+          method: 'DELETE',
+          url: `/users/${app.User.id}/favorites`,
+          data: {
+            location_id: spotId
+          }
+        })
+      }
+      $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
+    });
   }
 
   // private helper function to render to DOM
