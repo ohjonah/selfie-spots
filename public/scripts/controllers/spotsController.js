@@ -20,7 +20,7 @@ var app = app || {};
   };
 
   spotsController.show = function(ctx, next) {
-    $('#favorites').removeClass('hidden');
+    $('#spots').removeClass('hidden');
   }
 
   module.spotsController = spotsController;

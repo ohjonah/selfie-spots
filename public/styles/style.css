@@ -106,7 +106,7 @@ header p {
 .icon-menu.active {
   color: #FF8806; }
 
-.infowindow {
+#spots {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -122,13 +122,13 @@ header p {
   font-size: 3em;
   cursor: pointer; }
 
-.infowindow p {
+#spots p {
   font-family: "Jaldi", sans-serif;
   letter-spacing: 1px;
   font-size: 1.25em;
   color: #C400E8; }
 
-p.answer-styling {
+#spots .answer-styling {
   font-family: "Exo 2", sans-serif;
   font-weight: bold;
   font-size: 2.5em;
@@ -161,7 +161,7 @@ p.answer-styling {
   header p:hover {
     color: #FF8806; } }
 @media only screen and (min-width: 740px) {
-  .infowindow {
+  #spots {
     width: 50%;
     height: 100%; } }
 @media only screen and (max-width: 456px) {

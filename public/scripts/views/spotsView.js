@@ -15,7 +15,7 @@ var app = app || {};
   };
 
   spotsView.initSpotView = function(spotIdMatch) {
-    $('#favorites').empty().append(render(spotIdMatch));
+    $('#spots').empty().append(render(spotIdMatch));
     spotsView.infowindowHandler();
     spotsView.favoritesHandler();
   };
