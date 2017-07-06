@@ -82,7 +82,7 @@ header p {
   display: none; }
 
 .spacer {
-  margin: 30px; }
+  margin: 30px auto; }
 
 #map {
   height: 100%;
@@ -162,7 +162,8 @@ p.answer-styling {
     color: #FF8806; } }
 @media only screen and (min-width: 740px) {
   .infowindow {
-    width: 50%; } }
+    width: 50%;
+    height: 100%; } }
 @media only screen and (max-width: 456px) {
   h1 {
     font-size: 2em; }
