@@ -8,10 +8,8 @@ var app = app || {};
   
   favoritesView.index = function(favorites) {
     let $favorites = $('#favorites');
-
-    favorites = app.Spot.all;
-
-    $favorites.fadeIn(100).siblings('section').hide();
+    $('section').addClass('hidden');
+    $favorites.removeClass('hidden');
 
     let template = Handlebars.compile($('#favorite-template').html());
     favorites.forEach(f => $favorites.append(template(f)));
