@@ -6,22 +6,16 @@ var app = app || {};
 
   let spotsView = {};
 
-  spotsView.searchByLocId = function(locId) {
-    var spotIdMatch = app.Spot.all.find(spot => {
-      console.log('spot.id', spot.id);
-      console.log('locId', locId);
-      console.log(spot.id === locId);
-      return spot.id === locId;
-    });
+  spotsView.searchByLocId = function(locId, callback) {
+    var spotIdMatch = app.Spot.all.find(spot => spot.id === locId);
 
-    console.log('spotIdMatch', spotIdMatch);
     spotIdMatch.popScore = app.Spot.calcPopScore(spotIdMatch);
 
-    spotsView.initSpotView(spotIdMatch);
+    callback(spotIdMatch);
   };
 
   spotsView.initSpotView = function(spotIdMatch) {
-    $('#spot-overlay').empty().append(render(spotIdMatch));
+    $('#favorites').empty().append(render(spotIdMatch));
     spotsView.infowindowHandler();
     spotsView.favoritesHandler();
   };
