@@ -1,26 +1,42 @@
-html {
-  height: 100%;
-  width: 100%; }
-
-main {
+html, main, body {
   height: 100%; }
 
-#container {
+section {
   height: 85%; }
 
-body {
-  height: 100%; }
+header, footer {
+  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
+  color: #fff; }
 
 header {
   height: 10%;
-  position: relative;
-  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
-  color: #fff; }
+  position: relative; }
 
 footer {
-  height: 5%;
-  background: linear-gradient(to bottom right, #C400E8, #FF85D9);
-  color: #fff; }
+  height: 5%; }
+
+#landing {
+  margin-top: 0;
+  background-color: rgba(152, 9, 178, 0.5);
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 10000; }
+
+.map-protector {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(152, 9, 178, 0.1);
+  z-index: 9500;
+  position: absolute; }
+
+.login input {
+  border-radius: 2px;
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-width: 0;
+  height: 35%; }
 
 a {
   font-family: "Jaldi", sans-serif;
@@ -69,7 +85,26 @@ header p {
   margin: 30px; }
 
 #map {
-  height: 100%; }
+  height: 100%;
+  position: relative; }
+
+#menu.active {
+  display: block;
+  position: absolute;
+  bottom: -60%;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  background: linear-gradient(to bottom right, rgba(196, 0, 232, 0.75), rgba(255, 133, 217, 0.75));
+  z-index: 9999999999999999; }
+  #menu.active li {
+    display: inline;
+    font-size: 2em;
+    margin: 0 5vw;
+    font-family: "Exo 2", sans-serif; }
+
+.icon-menu.active {
+  color: #FF8806; }
 
 .infowindow {
   width: 100%;
@@ -127,7 +162,25 @@ p.answer-styling {
     color: #FF8806; } }
 @media only screen and (min-width: 740px) {
   .infowindow {
-    width: 50%;
-    height: 100%; } }
+    width: 50%; } }
+@media only screen and (max-width: 456px) {
+  h1 {
+    font-size: 2em; }
+
+  .icon-camera {
+    font-size: 1.8em; }
+
+  .icon-menu {
+    font-size: 2em; }
+
+  header p {
+    font-size: 1em;
+    right: 56px;
+    bottom: 32%; }
+
+  #menu.active li {
+    margin: 0 3vw; } }
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
