@@ -11,9 +11,10 @@ var app = app || {};
 
   spotsController.load = function(ctx, next) {
     console.log(ctx.params.id);
+    app.spotsView.searchByLocId(ctx.params.id);
     next();
 
-    // app.spotsView.searchByLocId(id);
+    //
   };
 
   module.spotsController = spotsController;
