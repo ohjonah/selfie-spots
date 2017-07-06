@@ -16,8 +16,16 @@ var app = app || {};
 
   spotsView.initSpotView = function(spotIdMatch) {
     $('#spots').empty().append(render(spotIdMatch));
+
+    $.get(`/users/${app.User.id}/favorites`)
+     .then(data => {
+       if (data.find((spotId) => parseInt(spotId.location_id) === spotIdMatch.id)) {
+         $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
+       }
+     });
+
     spotsView.infowindowHandler();
-    spotsView.favoritesHandler();
+    spotsView.favoritesHandler(spotIdMatch.id);
   };
 
   spotsView.infowindowHandler = function() {
@@ -26,10 +34,25 @@ var app = app || {};
     });
   };
 
-  spotsView.favoritesHandler = function() {
+  spotsView.favoritesHandler = function(spotId) {
     $('#favorite-btn').on('click', function() {
+      console.log($(this));
+      
+      if ($(this).hasClass('icon-star-empty')) {
+        $.post(`/users/${app.User.id}/favorites`, {
+          location_id: spotId
+        })
+      } else {
+        $.ajax({
+          method: 'DELETE',
+          url: `/users/${app.User.id}/favorites`,
+          data: {
+            location_id: spotId
+          }
+        })
+      }
       $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
-    })
+    });
   }
 
   // private helper function to render to DOM
