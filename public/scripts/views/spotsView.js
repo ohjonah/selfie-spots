@@ -22,7 +22,7 @@ var app = app || {};
 
   spotsView.infowindowHandler = function() {
     $('#exit-overlay').on('click', function() {
-      $('.infowindow').remove();
+      page('/');
     });
   };
 
