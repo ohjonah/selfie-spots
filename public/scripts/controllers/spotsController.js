@@ -5,9 +5,23 @@ var app = app || {};
 (function(module) {
   const spotsController = {};
 
-  spotsController.index = function() {
+  spotsController.load = function(ctx, next) {
+    app.spotsView.searchByLocId(parseInt(ctx.params.id), function(spot) {
+      ctx.spot = spot;
+    });
 
+    next();
   };
+
+  spotsController.render = function(ctx, next) {
+    app.spotsView.initSpotView(ctx.spot);
+
+    next();
+  };
+
+  spotsController.show = function(ctx, next) {
+    $('#spots').removeClass('hidden');
+  }
 
   module.spotsController = spotsController;
 })(app);

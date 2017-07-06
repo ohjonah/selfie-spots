@@ -86,7 +86,7 @@
   height: 100%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.8);
   text-align: center;
   font-family: $body-font;
   color: white;
@@ -102,11 +102,16 @@
 }
 .answer-styling {
   font-weight: bold;
-  font-style: italic;
-  text-decoration: underline;
+  font-size: 2.5em;
+  color: $white-color;
 }
 .icon-star-empty {
   font-size: 3em;
+  color: yellow;
+}
+.icon-star-full {
+  font-size: 3em;
+  color: yellow;
 }
 //for screens larger than 740px
 @media only screen and (min-width: 740px) {

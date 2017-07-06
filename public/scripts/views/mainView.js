@@ -56,7 +56,8 @@ var app = app || {};
 
     marker.locId = id;
 
-    marker.addListener('click', () =>  app.spotsView.searchByLocId(marker.locId));
+    marker.addListener('click', () => {
+      page(`/spots/${marker.locId}`)});
   }
 
   function setSpotMarker(coordinates, selfieCount, id) {
