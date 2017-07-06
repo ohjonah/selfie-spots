@@ -13,7 +13,7 @@ var app = app || {};
   Spot.fetchNearby = function(coordinates, callback) {
     $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function(spotData) {
       Spot.all = spotData.data.map(s => {
-        s.location.images = [s.images.thumbnail];
+        s.location.images = [s.images.low_resolution.url];
         return s.location;
       })
                               .reduce(groupBySpot, [])
@@ -68,8 +68,6 @@ var app = app || {};
       return 'Meh Spot...';
     }
   };
-
-
 
   module.Spot = Spot;
 })(app);
