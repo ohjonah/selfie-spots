@@ -6,7 +6,7 @@ var app = app || {};
   const settingsController = {};
 
   settingsController.index = function() {
-
+    app.settingsView.index();
   };
 
   module.settingsController = settingsController;

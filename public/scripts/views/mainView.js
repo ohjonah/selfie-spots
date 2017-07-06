@@ -13,8 +13,8 @@ var app = app || {};
 
   mainView.index = function() {
     $('#name').text(app.User.name);
-    $('section').hide();
-    $('#main').show();
+    $('section').addClass('hidden');
+    $('#main').removeClass('hidden');
   };
 
   mainView.initializeMap = function() {

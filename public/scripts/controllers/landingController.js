@@ -19,9 +19,5 @@ var app = app || {};
     });
   };
 
-  landingController.proceed = function() {
-    app.mainController.index();
-  }
-
   module.landingController = landingController;
 })(app);

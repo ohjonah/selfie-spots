@@ -10,7 +10,7 @@ var app = app || {};
   };
 
   favoritesController.loadAll = function(ctx, next) {
-    app.Spot.fetchFavorites(ctx.params.id, function(favorites) {
+    app.Spot.fetchFavorites(app.User.id, function(favorites) {
       ctx.favorites = favorites;
       next();
     });
