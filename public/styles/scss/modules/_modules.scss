@@ -120,12 +120,19 @@
   margin: 5px;
 }
 .icon-star-empty {
-  font-size: 3em;
   color: yellow;
 }
 .icon-star-full {
-  font-size: 3.5vw;
   color: yellow;
+}
+#favorites .icon-star-full {
+  font-size: 3.5vw;
+}
+#spots .icon-star-full {
+  font-size: 3em;
+}
+#spots .icon-star-empty {
+  font-size: 3em;
 }
 //for screens larger than 740px
 @media only screen and (min-width: 740px) {
