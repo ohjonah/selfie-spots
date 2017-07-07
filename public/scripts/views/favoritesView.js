@@ -11,16 +11,19 @@ var app = app || {};
     $('section').addClass('hidden');
     $favorites.removeClass('hidden');
 
-    let template = Handlebars.compile($('#favorite-template').html());
-    favorites.forEach(f => $favorites.append(template(f)));
+    if ($favorites.find('.favorite').length === 0) {
+      let template = Handlebars.compile($('#favorite-template').html());
+      favorites.forEach(f => $favorites.append(template(f)));
+    }
 
     $favorites.find('.favorite').find('a').on('click', function(e) {
+      console.log($(this).data('id'));
       e.preventDefault();
       $.ajax({
         method: "DELETE",
-        url: `users/${app.User.id}/favorites`,
+        url: `/users/${app.User.id}/favorites`,
         data: {
-          location_id: $(this).data('id')
+          location_id: Number($(this).data('id'))
         }
       }).done(() => {
         $(this).parent().remove();
