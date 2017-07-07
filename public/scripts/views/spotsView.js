@@ -41,7 +41,7 @@ var app = app || {};
       if ($(this).hasClass('icon-star-empty')) {
         $.post(`/users/${app.User.id}/favorites`, {
           location_id: spotId
-        })
+        });
       } else {
         $.ajax({
           method: 'DELETE',
@@ -49,7 +49,7 @@ var app = app || {};
           data: {
             location_id: spotId
           }
-        })
+        });
       }
       $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
     });
