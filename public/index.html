@@ -8,31 +8,32 @@
   <link href="https://fonts.googleapis.com/css?family=Exo+2|Jaldi|Righteous" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
 
-  <script id="spot-template" type="text/x-handlebars-template">
-    <div class="infowindow">
-      <span id="exit-overlay" class="icon-cross"></span>
-      <div class="clearfix"></div>
+    <script id="spot-template" type="text/x-handlebars-template">
+      <div>
+        <span id="exit-overlay" class="icon-cross"></span>
+        <div class="clearfix"></div>
 
-      <section class="spacer">
-        <p>SELFIE SPOT</p>
-        <p class="answer-styling">{{ name }}</p>
-        <div class="spacer">
-          <p>SELFIES TAKEN</p>
-          <p class="answer-styling">{{ count }}</p>
-        </div>
-        <p>SELFIE SUMMARY</p>
-        <p class="answer-styling">{{ popScore }} </p>
-        <div id="favorite-btn" class="icon-star-empty spacer"></div>
-      </section>
-    </div>
-  </script>
+        <section class="spacer">
+          <p>SELFIE SPOT</p>
+          <p class="answer-styling">{{ name }}</p>
+          <div class="spacer">
+            <p>SELFIES TAKEN</p>
+            <p class="answer-styling">{{ count }}</p>
+          </div>
+          <p>SELFIE SUMMARY</p>
+          <p class="answer-styling">{{ popScore }} </p>
+          <div id="favorite-btn" class="icon-star-empty spacer"></div>
+          <img src="{{ images.[0] }}">
+        </section>
+      </div>
+    </script>
 
-  <script id="favorite-template" type="text/x-handlebars-template">
-    <div class="favorite">
-    </span><span>{{name}}</span><a data-id="{{id}}" href="#"><span class="icon-star-full"></span></a>
-  </div>
-</script>
-</head>
+    <script id="favorite-template" type="text/x-handlebars-template">
+      <div class="favorite">
+      </span><span>{{name}}</span><a data-id="{{id}}" href="#"><span class="icon-star-full"></span></a>
+      </div>
+    </script>
+  </head>
 
 <body>
   <main>

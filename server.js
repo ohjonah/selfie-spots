@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-const client = new pg.Client(process.env.CONNECTION_STRING);
+const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
 client.on('error', console.error);
 
