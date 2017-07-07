@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-(function(module) {
+(function (module) {
 
   function Spot(spotData) {
     Object.keys(spotData).forEach(k => this[k] = spotData[k]);
@@ -10,25 +10,48 @@ var app = app || {};
 
   Spot.all = [];
 
-  Spot.fetchNearby = function(coordinates, callback) {
-    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function(spotData) {
+  Spot.fetchNearby = function (coordinates, callback) {
+    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function (spotData) {
       Spot.all = spotData.data.map(s => s.location)
-                              .reduce(groupBySpot, [])
-                              .map(s => new Spot(s));
+        .reduce(groupBySpot, [])
+        .map(s => new Spot(s));
 
       callback(Spot.all);
     });
   };
 
-  Spot.fetchFavorites = function(userId, callback) {
-    $.getJSON(`/users/${userId}/favorites`, function(favoritesData) {
-      var favoriteSpots = favoritesData.filter(f => app.Spot.all.some(s => f.location_id === s.location_id))
-                                       .reduce(groupBySpot, [])
-                                       .map(s => new Spot(s));
+  Spot.fetchFavorites = function (userId, callback) {
+    $.getJSON(`/users/${userId}/favorites`, function (favoritesData) {
 
-      favoriteSpots.forEach(Spot.all.push);
+      var favorites = [];
 
-      callback(favoriteSpots);
+      for (var index = 0; index < favoritesData.length; index++) {
+        var favorite = favoritesData[index];
+        var loadedFavorite = app.Spot.all.filter(s => s.id === favorite.location_id)[0];
+
+        if (loadedFavorite) {
+          favorites.push(loadedFavorite);
+        } else {
+          $.getJSON(`/ig/locations/${favorite.location_id}`, function (locationData) {
+            favorite.name = locationData.data.name;
+            favorite.count = 1;
+
+            let spot = new Spot(favorite);
+
+            app.Spot.all.push(spot);
+            favorites.push(spot);
+
+            if (favorites.length === favoritesData.length) {
+              callback(favorites);
+              return;
+            }
+          });
+        }
+      }
+
+      if (favorites.length === favoritesData.length) {
+        callback(favorites);
+      }
     });
   };
 
@@ -45,15 +68,15 @@ var app = app || {};
     return acc;
   }
 
-  Spot.sumSelfieCount = function() {
+  Spot.sumSelfieCount = function () {
     var sum = Spot.all.map(spot => spot.count)
-                      .reduce((acc, curr) => acc + curr);
+      .reduce((acc, curr) => acc + curr);
 
     return sum;
   };
 
-  Spot.calcPopScore = function(spotIdMatch) {
-    var popScore = spotIdMatch.count/app.Spot.sumSelfieCount();
+  Spot.calcPopScore = function (spotIdMatch) {
+    var popScore = spotIdMatch.count / app.Spot.sumSelfieCount();
 
 
     if (popScore > 0.2) {
