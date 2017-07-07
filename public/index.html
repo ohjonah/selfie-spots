@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/style.css">
 
     <script id="spot-template" type="text/x-handlebars-template">
-      <div class="infowindow">
+      <div>
         <span id="exit-overlay" class="icon-cross"></span>
         <div class="clearfix"></div>
 
@@ -22,7 +22,7 @@
           </div>
           <p>SELFIE SUMMARY</p>
           <p class="answer-styling">{{ popScore }} </p>
-          <div class="icon-star-empty spacer"></div>
+          <div id="favorite-btn" class="icon-star-empty spacer"></div>
           <img src="{{ images.[0] }}">
         </section>
       </div>

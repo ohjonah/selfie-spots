@@ -68,6 +68,6 @@ var app = app || {};
       return 'Meh Spot...';
     }
   };
-
+  
   module.Spot = Spot;
 })(app);
