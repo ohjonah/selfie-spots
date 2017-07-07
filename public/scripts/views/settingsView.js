@@ -41,6 +41,12 @@ var app = app || {};
           localStorage.removeItem('name');
           localStorage.removeItem('email');
           localStorage.removeItem('user_id');
+          $('#settings').addClass('hidden');
+          $('#main').removeClass('hidden');
+          $('#landing').removeClass('hidden');
+          $('#login-name').val('');
+          $('#login-email').val('');
+          $('#name').html('');
           page('/');
         }
       );
