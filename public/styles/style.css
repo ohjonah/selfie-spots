@@ -126,7 +126,8 @@ header p {
   font-family: "Jaldi", sans-serif;
   color: white; }
   #spots img {
-    width: 250px;
+    width: 160px;
+    margin-top: 5%;
     border: solid 2px #fff;
     border-radius: 3px; }
 
@@ -150,9 +151,6 @@ header p {
   font-size: 2.5em;
   color: #fff;
   margin: 0; }
-
-#spots img {
-  margin: 5px; }
 
 .icon-star-empty {
   color: yellow; }

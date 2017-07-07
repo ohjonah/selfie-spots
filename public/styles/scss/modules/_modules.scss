@@ -90,7 +90,8 @@
   font-family: $body-font;
   color: white;
   img {
-    width: 250px;
+    width: 160px;
+    margin-top: 5%;
     border: solid 2px $white-color;
     border-radius: 3px;
   }
@@ -116,9 +117,7 @@
   color: $white-color;
   margin: 0;
 }
-#spots img {
-  margin: 5px;
-}
+
 .icon-star-empty {
   color: yellow;
 }
