@@ -179,8 +179,12 @@ header p {
   z-index: 1; }
 
 .login {
-  background-color: rgba(152, 9, 178, 0.5);
-  height: 35%; }
+  width: 230px;
+  padding: 20px;
+  margin: 20vh auto 0 auto;
+  border-radius: 4px;
+  border: rgba(255, 255, 255, 0.6) 2px solid;
+  background-color: rgba(152, 9, 178, 0.8); }
 
 .login input {
   border-radius: 2px;
@@ -189,9 +193,17 @@ header p {
   display: block;
   border-width: 0; }
 
-.map-protector {
-  background-color: rgba(152, 9, 178, 0.2);
-  height: 65%; }
+.login span {
+  display: block;
+  padding: 0px 0 5px 0;
+  font-family: "Jaldi", sans-serif;
+  font-size: 6em;
+  font-weight: bold;
+  color: white; }
+
+input {
+  font-family: "Exo 2", sans-serif;
+  font-weight: bold; }
 
 #favorites {
   background-color: rgba(152, 9, 178, 0.1);
