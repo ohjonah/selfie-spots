@@ -10,12 +10,14 @@ var app = app || {};
 
   Spot.all = [];
 
-  Spot.fetchNearby = function (coordinates, callback) {
-    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function (spotData) {
-      Spot.all = spotData.data.map(s => s.location)
-        .reduce(groupBySpot, [])
-        .map(s => new Spot(s));
-
+  Spot.fetchNearby = function(coordinates, callback) {
+    $.getJSON(`/ig/media/search?lat=${coordinates.lat}&lng=${coordinates.lng}&distance=5000`, function(spotData) {
+      Spot.all = spotData.data.map(s => {
+        s.location.images = [s.images.low_resolution.url];
+        return s.location;
+      })
+                              .reduce(groupBySpot, [])
+                              .map(s => new Spot(s));
       callback(Spot.all);
     });
   };
@@ -60,6 +62,7 @@ var app = app || {};
 
     if (spot) {
       spot.count++;
+      spot.images = spot.images.concat(cur.images);
     } else {
       cur.count = 1;
       acc.push(cur);
@@ -87,15 +90,6 @@ var app = app || {};
       return 'Meh Spot...';
     }
   };
-
-  // Spot.prototype.addToFavorites = function(callback)
-  //   {
-  //     $.post('/favorites', {name: this.name, count: this.count, popScore: this.popScore})
-  //     .then(console.log)
-  //     .then(callback);
-  //   }
-
-
-
+  
   module.Spot = Spot;
 })(app);
