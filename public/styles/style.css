@@ -22,7 +22,9 @@ header {
   position: relative; }
 
 footer {
-  height: 5%; }
+  height: 5%;
+  font-family: "Jaldi", sans-serif;
+  color: #fff; }
 
 header div {
   position: absolute;
@@ -199,7 +201,8 @@ header p {
     position: absolute;
     right: 1vw; }
     .favorite a .icon-star-full {
-      color: yellow; }
+      color: yellow;
+      font-size: 2em; }
 
 @media only screen and (min-width: 640px) {
   #favorites {
@@ -209,6 +212,10 @@ header p {
     width: 45vw; }
     .favorite .icon-star-full:hover {
       color: black; } }
+footer p {
+  font-size: .75em;
+  margin-left: 2vw; }
+
 .hidden {
   display: none; }
 
