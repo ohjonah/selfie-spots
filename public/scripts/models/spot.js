@@ -15,24 +15,25 @@ var app = app || {};
       Spot.all = spotData.data.map(s => {
         s.location.images = [s.images.low_resolution.url];
         return s.location;
-      })
-                              .reduce(groupBySpot, [])
-                              .map(s => new Spot(s));
+      }).reduce(groupBySpot, [])
+        .map(s => new Spot(s));
       callback(Spot.all);
     });
   };
 
   Spot.fetchFavorites = function (userId, callback) {
+    if (app.User.favorites.length > 0) {
+      callback(app.User.favorites);
+      return;
+    }
+
     $.getJSON(`/users/${userId}/favorites`, function (favoritesData) {
-
-      var favorites = [];
-
       for (var index = 0; index < favoritesData.length; index++) {
         var favorite = favoritesData[index];
-        var loadedFavorite = app.Spot.all.filter(s => s.id === favorite.location_id)[0];
+        var loadedFavorite = app.Spot.all.find(s => s.id === favorite.location_id);
 
         if (loadedFavorite) {
-          favorites.push(loadedFavorite);
+          app.User.favorites.push(loadedFavorite);
         } else {
           $.getJSON(`/ig/locations/${favorite.location_id}`, function (locationData) {
             favorite.name = locationData.data.name;
@@ -41,18 +42,18 @@ var app = app || {};
             let spot = new Spot(favorite);
 
             app.Spot.all.push(spot);
-            favorites.push(spot);
+            app.User.favorites.push(spot);
 
-            if (favorites.length === favoritesData.length) {
-              callback(favorites);
+            if (app.User.favorites.length === favoritesData.length) {
+              callback(app.User.favorites);
               return;
             }
           });
         }
       }
 
-      if (favorites.length === favoritesData.length) {
-        callback(favorites);
+      if (app.User.favorites.length === favoritesData.length) {
+        callback(app.User.favorites);
       }
     });
   };

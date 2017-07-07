@@ -9,6 +9,10 @@ header {
 }
 footer {
   height: 5%;
+  font-size: 1.1em;
+  font-family: $body-font;
+  line-height: 2em;
+  padding: 0 15px;
 }
 header div {
   position: absolute;

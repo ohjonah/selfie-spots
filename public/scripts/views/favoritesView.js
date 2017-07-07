@@ -11,8 +11,10 @@ var app = app || {};
     $('section').addClass('hidden');
     $favorites.removeClass('hidden');
 
-    let template = Handlebars.compile($('#favorite-template').html());
-    favorites.forEach(f => $favorites.append(template(f)));
+    if ($favorites.find('.favorite').length === 0) {
+      let template = Handlebars.compile($('#favorite-template').html());
+      favorites.forEach(f => $favorites.append(template(f)));
+    }
 
     $favorites.find('.favorite').find('a').on('click', function(e) {
       e.preventDefault();

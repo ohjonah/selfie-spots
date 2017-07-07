@@ -1,8 +1,10 @@
-html, main, body {
+html, body, section {
   height: 100%; }
 
+main {
+  height: 85%; }
+
 section {
-  height: 85%;
   width: 100%; }
 
 a {
@@ -22,7 +24,11 @@ header {
   position: relative; }
 
 footer {
-  height: 5%; }
+  height: 5%;
+  font-size: 1.1em;
+  font-family: "Jaldi", sans-serif;
+  line-height: 2em;
+  padding: 0 15px; }
 
 header div {
   position: absolute;
@@ -107,10 +113,7 @@ header p {
       margin-right: 10px; }
 
   header p {
-    right: 15px; }
-
-  header p:hover {
-    color: #FF8806; } }
+    right: 15px; } }
 #spots {
   width: 100%;
   height: 100%;
@@ -118,6 +121,8 @@ header p {
   top: 0;
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
   font-family: "Jaldi", sans-serif;
   color: white; }
   #spots img {
@@ -131,20 +136,30 @@ header p {
   font-size: 3em;
   cursor: pointer; }
 
-.infowindow p {
-  font-size: 3em; }
+#spots p {
+  font-family: "Jaldi", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  margin: 40px 0 2px 0;
+  color: #C400E8;
+  clear: both; }
 
-.answer-styling {
+#spots .answer-styling {
+  font-family: "Exo 2", sans-serif;
   font-weight: bold;
   font-size: 2.5em;
-  color: #fff; }
+  color: #fff;
+  margin: 0; }
+
+#spots img {
+  margin: 5px; }
 
 .icon-star-empty {
   font-size: 3em;
   color: yellow; }
 
 .icon-star-full {
-  font-size: 3em;
+  font-size: 3.5vw;
   color: yellow; }
 
 @media only screen and (min-width: 740px) {
@@ -170,9 +185,6 @@ header p {
 .map-protector {
   background-color: rgba(152, 9, 178, 0.2);
   height: 65%; }
-
-.spacer {
-  margin: 20px; }
 
 #favorites {
   background-color: rgba(152, 9, 178, 0.1);
@@ -205,15 +217,8 @@ header p {
     width: 45vw; }
     .favorite .icon-star-full:hover {
       color: black; } }
-
 #settings {
-  max-height: 100%;
-  margin: auto;
-  z-index: 100;
-  background-color: rgba(152, 9, 178, 0.5);
-  display: block;
-  position: absolute;
-  padding: 5px; }
+  background-color: rgba(152, 9, 178, 0.5); }
 
 #setting-text {
   width: 100%;

@@ -5,6 +5,8 @@ var app = app || {};
 (function(module) {
   var User = {};
 
+  User.favorites = [];
+
   User.loadLocal = function() {
     app.User.id = localStorage.getItem('user_id');
     app.User.name = localStorage.getItem('name');
