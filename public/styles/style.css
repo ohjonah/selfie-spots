@@ -205,6 +205,8 @@ input {
 
 #favorites {
   background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   font-family: "Exo 2", sans-serif;
   text-align: center; }
@@ -237,7 +239,9 @@ input {
 #settings {
   text-align: center;
   font-family: "Jaldi", sans-serif;
-  background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg); }
+  background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 #setting-text {
   width: 100%;

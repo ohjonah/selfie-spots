@@ -180,6 +180,8 @@ input {
 //favorites page
 #favorites {
   background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $white-color;
   font-family: $header-font;
   text-align: center;
@@ -220,6 +222,8 @@ input {
   text-align: center;
   font-family: $body-font;
   background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #setting-text {
