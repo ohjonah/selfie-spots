@@ -17,12 +17,13 @@ var app = app || {};
     }
 
     $favorites.find('.favorite').find('a').on('click', function(e) {
+      console.log($(this).data('id'));
       e.preventDefault();
       $.ajax({
         method: "DELETE",
-        url: `users/${app.User.id}/favorites`,
+        url: `/users/${app.User.id}/favorites`,
         data: {
-          location_id: $(this).data('id')
+          location_id: Number($(this).data('id'))
         }
       }).done(() => {
         $(this).parent().remove();

@@ -38,6 +38,8 @@ var app = app || {};
           $.getJSON(`/ig/locations/${favorite.location_id}`, function (locationData) {
             favorite.name = locationData.data.name;
             favorite.count = 1;
+            favorite.id = favorite.location_id;
+            delete favorite.location_id;
 
             let spot = new Spot(favorite);
 
