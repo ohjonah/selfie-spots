@@ -71,14 +71,18 @@
     <section id="favorites" class="hidden"></section>
 
     <section id="settings" class="hidden">
-      <p id="setting-text">SETTINGS</p>
-      <div class="underline"></div>
-      <input id="settings-name" placeholder="Name" name="user" type="text">
-      <input id="settings-email" placeholder="Email" name="email" type="text">
-      <input id="submit-button" type="submit" value="Submit">
-      <div id="warning-alert"> !WARNING!:
-      <br> THIS WILL DELETE ALL YOUR FAVORITES!</div>
-      <input id="delete-button" type="submit" value="*Delete Account*">
+      <p id="setting-text">account settings</p>
+      <div class="settings-form">
+        <p>update account</p>
+        <input id="settings-name" placeholder="Name" name="user" type="text" required>
+        <input id="settings-email" placeholder="Email" name="email" type="text" required>
+        <input id="submit-button" class="button" type="submit" value="Update">
+      </div>
+      <div id="warning-alert" class="settings-form">
+        <p>delete account</p>
+        <input id="delete-button" class="button" type="submit" value="Delete">
+        <p>WARNING! THIS WILL DELETE ALL YOUR FAVORITES!</p>
+      </div>
     </section>
   </main>
   <footer>
