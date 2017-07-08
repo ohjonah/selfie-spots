@@ -75,7 +75,7 @@ var app = app || {};
         setSpotMarker({lat: spot.latitude, lng: spot.longitude}, spot.count, spot.id);
       });
 
-      document.getElementById('map').dispatchEvent(mapInitializedEvent);
+      $('#map').trigger('initialized');
     });
   }
 

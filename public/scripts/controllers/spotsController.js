@@ -7,7 +7,7 @@ var app = app || {};
 
   spotsController.load = function(ctx, next) {
     if (app.Spot.all.length === 0) {
-      document.getElementById('map').addEventListener('initialized', function() {
+      $('#map').on('initialized', function() {
         app.spotsView.searchByLocId(parseInt(ctx.params.id), function(spot) {
           ctx.spot = spot;
         });
