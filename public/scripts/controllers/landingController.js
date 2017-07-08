@@ -6,7 +6,9 @@ var app = app || {};
   const landingController = {};
 
   landingController.index = function(ctx, next) {
-    if (app.User.loadLocal()) {
+    if (app.User.id || app.User.loadLocal()) {
+      $('#landing').addClass('hidden');
+      $('#name').text(app.User.name);
       next();
       return;
     }
@@ -14,7 +16,11 @@ var app = app || {};
     $('#login-button').on('click', function(event) {
       let name = $('#login-name').val();
       let email = $('#login-email').val();
-      app.User.loadRemote(name, email, next);
+      app.User.loadRemote(name, email, function() {
+        $('#landing').addClass('hidden');
+        $('#name').text(app.User.name);
+        next();
+      });
       event.preventDefault();
     });
   };

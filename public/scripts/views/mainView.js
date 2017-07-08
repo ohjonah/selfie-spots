@@ -7,12 +7,13 @@ var app = app || {};
   var mainView = {};
 
   const defaultCoordinates = {lat: 47.6182, lng: -122.3519};
+  const mapInitializedEvent = new Event('initialized');
 
   var map;
   var coordinates;
+  
 
   mainView.index = function() {
-    $('#name').text(app.User.name);
     $('section').addClass('hidden');
     $('#main').removeClass('hidden');
 
@@ -56,9 +57,8 @@ var app = app || {};
 
     marker.locId = id;
 
-    marker.addListener('click', () => {
-      page(`/spots/${marker.locId}`)});
-  }
+    marker.addListener('click', () => page(`/spots/${marker.locId}`));
+  };
 
   function setSpotMarker(coordinates, selfieCount, id) {
     var icon = {
@@ -74,6 +74,8 @@ var app = app || {};
       spots.forEach(function(spot) {
         setSpotMarker({lat: spot.latitude, lng: spot.longitude}, spot.count, spot.id);
       });
+
+      document.getElementById('map').dispatchEvent(mapInitializedEvent);
     });
   }
 

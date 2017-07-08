@@ -6,11 +6,21 @@ var app = app || {};
   const spotsController = {};
 
   spotsController.load = function(ctx, next) {
-    app.spotsView.searchByLocId(parseInt(ctx.params.id), function(spot) {
-      ctx.spot = spot;
-    });
+    if (app.Spot.all.length === 0) {
+      document.getElementById('map').addEventListener('initialized', function() {
+        app.spotsView.searchByLocId(parseInt(ctx.params.id), function(spot) {
+          ctx.spot = spot;
+        });
 
-    next();
+        next();
+      });
+    } else {
+      app.spotsView.searchByLocId(parseInt(ctx.params.id), function(spot) {
+        ctx.spot = spot;
+      });
+
+      next();
+    }
   };
 
   spotsController.render = function(ctx, next) {
@@ -19,9 +29,9 @@ var app = app || {};
     next();
   };
 
-  spotsController.show = function(ctx, next) {
+  spotsController.show = function() {
     $('#spots').removeClass('hidden');
-  }
+  };
 
   module.spotsController = spotsController;
 })(app);
