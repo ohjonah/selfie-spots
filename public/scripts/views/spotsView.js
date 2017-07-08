@@ -48,7 +48,7 @@ var app = app || {};
             location_id: spotId
           }
         });
-        app.User.favorites = app.User.favorites.filter(f => f.id !== spotId);
+        app.User.favorites = app.User.favorites.filter(f => Number(f.id) !== spotId);
       }
       $('#favorite-btn').toggleClass('icon-star-full icon-star-empty');
     });
