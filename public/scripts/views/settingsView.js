@@ -21,14 +21,18 @@ var app = app || {};
         }
 
       }).done(
-        function(results) {
-          console.log(results);
-          localStorage.setItem('name', $('#settings-name').val());
-          localStorage.setItem('email',
-          $('#settings-email').val());
+        function() {
+          let name = $('#settings-name').val();
+          let email = $('#settings-email').val();
+          localStorage.setItem('name', name);
+          localStorage.setItem('email', email);
+          app.User.name = name;
+          app.User.email = email;
           page('/');
         }
       );
+
+      event.preventDefault();
     });
 
     $('#delete-button').on('click', function(event) {
@@ -36,11 +40,13 @@ var app = app || {};
         method:'DELETE',
         url:'/users/' + app.User.id
       }).done(
-        function(results) {
-          console.log(results);
+        function() {
           localStorage.removeItem('name');
           localStorage.removeItem('email');
           localStorage.removeItem('user_id');
+          delete app.User.id;
+          delete app.User.name;
+          delete app.User.email;
           $('#settings').addClass('hidden');
           $('#main').removeClass('hidden');
           $('#landing').removeClass('hidden');
@@ -50,6 +56,8 @@ var app = app || {};
           page('/');
         }
       );
+
+      event.preventDefault();
     });
   };
 

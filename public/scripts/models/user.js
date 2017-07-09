@@ -41,7 +41,7 @@ var app = app || {};
         callback();
       });
    });
-  }
+  };
 
   User.save = function() {
     localStorage.setItem('user_id', app.User.id);
