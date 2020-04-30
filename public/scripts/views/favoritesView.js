@@ -17,13 +17,8 @@ var app = app || {};
     $favorites.find('.favorite').find('a').on('click', function(e) {
       e.preventDefault();
       $.ajax({
-<<<<<<< HEAD
-        method: 'DELETE',
-        url: `users/${app.User.id}/favorites`,
-=======
         method: "DELETE",
-        url: `/users/${app.User.id}/favorites`,
->>>>>>> 6ff73a1f09ae182f1d609bf14262adf17211fd16
+        url: `users/${app.User.id}/favorites`,
         data: {
           location_id: Number($(this).data('id'))
         }

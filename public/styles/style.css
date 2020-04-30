@@ -25,15 +25,11 @@ header {
 
 footer {
   height: 5%;
-<<<<<<< HEAD
-  font-family: "Jaldi", sans-serif;
-  color: #fff; }
-=======
   font-size: 1.1em;
   font-family: "Jaldi", sans-serif;
   line-height: 2em;
-  padding: 0 15px; }
->>>>>>> 6ff73a1f09ae182f1d609bf14262adf17211fd16
+  padding: 0 15px;
+}
 
 header div {
   position: absolute;
@@ -242,11 +238,6 @@ input {
     width: 45vw; }
     .favorite .icon-star-full:hover {
       color: black; } }
-<<<<<<< HEAD
-footer p {
-  font-size: .75em;
-  margin-left: 2vw; }
-=======
 #settings {
   text-align: center;
   font-family: "Jaldi", sans-serif;
@@ -284,7 +275,6 @@ footer p {
 
 #warning-alert p:nth-child(3) {
   color: red; }
->>>>>>> 6ff73a1f09ae182f1d609bf14262adf17211fd16
 
 .hidden {
   display: none; }
