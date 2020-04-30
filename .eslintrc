@@ -3,7 +3,8 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jquery": true
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -20,5 +21,10 @@
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "semi": "warn"
+    },
+    "globals": {
+        "Handlebars": true,
+        "page": true,
+        "google": true
     }
 }

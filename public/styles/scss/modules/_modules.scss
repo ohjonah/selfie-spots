@@ -76,9 +76,6 @@
   header p {
     right: 15px;
   }
-  header p:hover {
-    color: $tert-color;
-  }
 }
 //info window
 #spots {
@@ -88,10 +85,13 @@
   top: 0;
   background: rgba(0,0,0,.8);
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-family: $body-font;
   color: white;
   img {
-    width: 250px;
+    width: 160px;
+    margin-top: 5%;
     border: solid 2px $white-color;
     border-radius: 3px;
   }
@@ -106,21 +106,32 @@
   font-family: $body-font;
   letter-spacing: 1px;
   font-size: 1.25em;
+  margin: 40px 0 2px 0;
   color: $prime-color;
+  clear: both;
 }
 #spots .answer-styling {
   font-family: $header-font;
   font-weight: bold;
   font-size: 2.5em;
   color: $white-color;
+  margin: 0;
 }
+
 .icon-star-empty {
-  font-size: 3em;
   color: yellow;
 }
 .icon-star-full {
-  font-size: 3em;
   color: yellow;
+}
+#favorites .icon-star-full {
+  font-size: 3.5vw;
+}
+#spots .icon-star-full {
+  font-size: 3em;
+}
+#spots .icon-star-empty {
+  font-size: 3em;
 }
 //for screens larger than 740px
 @media only screen and (min-width: 740px) {
@@ -136,9 +147,14 @@
   z-index: 1;
 }
 .login {
-  background-color: rgba(152, 9, 178, .5);
-  height: 35%;
+  width: 230px;
+  padding: 20px;
+  margin: 20vh auto 0 auto;
+  border-radius: 4px;
+  border: rgba(255, 255, 255, 0.6) 2px solid;
+  background-color: rgba(152, 9, 178, 0.8);
 }
+
 .login input {
   border-radius: 2px;
   margin: 7px auto;
@@ -146,16 +162,26 @@
   display: block;
   border-width: 0;
 }
-.map-protector {
-  background-color: rgba(152, 9, 178, .2);
-  height: 65%;
+
+.login span {
+  display: block;
+  padding: 0px 0 5px 0;
+  font-family: $header-font;
+  font-size: 6em;
+  font-weight: bold;
+  color: white;
 }
-.spacer {
-  margin: 20px;
+
+input {
+  font-family: $header-font;
+  font-weight: bold;
 }
+
 //favorites page
 #favorites {
-  background-color: rgba(152, 9, 178, .1);
+  background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $white-color;
   font-family: $header-font;
   text-align: center;
@@ -192,7 +218,56 @@
     }
   }
 }
+<<<<<<< HEAD
 footer p {
   font-size: .75em;
   margin-left: 2vw;
 }
+=======
+//SETTINGS STYLES
+#settings {
+  text-align: center;
+  font-family: $body-font;
+  background-image: url(https://papertreiger.files.wordpress.com/2012/07/seattle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#setting-text {
+  width: 100%;
+  padding: 5px;
+  background: rgba(0,0,0,.7);
+  color: white;
+  font-size: 3em;
+}
+
+.settings-form {
+  width: 230px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.settings-form p {
+  font-size: 1.5em;
+  color: white;
+}
+
+.settings-form input {
+  margin: 7px auto;
+  padding: 7px;
+  display: block;
+  border-radius: 2px;
+  border-width: 0;
+}
+
+#delete-button {
+  color: red;
+}
+
+#warning-alert p:nth-child(3) {
+  color: red;
+}
+  //END SETTINGS STYLES
+>>>>>>> 6ff73a1f09ae182f1d609bf14262adf17211fd16
